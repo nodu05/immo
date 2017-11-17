@@ -6,9 +6,29 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="//jpostal-1006.appspot.com/jquery.jpostal.js"></script>
   </head>
 
   <body>
     <%= yield %>
   </body>
+
+  <script type="text/javascript">
+  $(function() {
+    $(window).ready( function() {
+      $('#postal_code').jpostal({
+        postcode : [
+          '#postal_code'
+        ],
+        address : {
+          '#prefecture': '%3',
+          '#city'          : '%4',
+          '#street'        : '%5',
+          '#address'    : '%3%4%%5'
+        }
+      });
+    });
+  });
+  </script>
+
 </html>

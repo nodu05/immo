@@ -28,22 +28,22 @@
 
   <div class="field">
     <%= form.label :postal_code %>
-    <%= form.number_field :postal_code, id: :company_postal_code %>
+    <%= form.number_field :postal_code, id: :postal_code, :class => 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :prefecture %>
-    <%= form.text_field :prefecture, id: :company_prefecture %>
+    <%= form.text_field :prefecture, id: :prefecture, :class => 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :city %>
-    <%= form.text_field :city, id: :company_city, :class => 'form-control' %>
+    <%= form.text_field :city, id: :city, :class => 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :street %>
-    <%= form.text_area :street, id: :company_street, :class => 'form-control' %>
+    <%= form.text_area :street, id: :street, :class => 'form-control' %>
   </div>
 
   <div class="field">
