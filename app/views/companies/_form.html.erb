@@ -13,17 +13,17 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :company_name %>
+    <%= form.text_field :name, id: :company_name, :class => 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :main_phone %>
-    <%= form.number_field :main_phone, id: :company_main_phone %>
+    <%= form.telephone_field :main_phone, id: :company_main_phone, :class => 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :Inquiry_phone %>
-    <%= form.number_field :Inquiry_phone, id: :company_Inquiry_phone %>
+    <%= form.telephone_field :Inquiry_phone, id: :company_Inquiry_phone, :class => 'form-control' %>
   </div>
 
   <div class="field">
@@ -38,22 +38,22 @@
 
   <div class="field">
     <%= form.label :city %>
-    <%= form.text_field :city, id: :company_city %>
+    <%= form.text_field :city, id: :company_city, :class => 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :street %>
-    <%= form.text_area :street, id: :company_street %>
+    <%= form.text_area :street, id: :company_street, :class => 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :email %>
-    <%= form.text_area :email, id: :company_email %>
+    <%= form.text_area :email, id: :company_email, :class => 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :license_number %>
-    <%= form.text_area :license_number, id: :company_license_number %>
+    <%= form.text_area :license_number, id: :company_license_number, :class => 'form-control' %>
   </div>
 
   <div class="field">
@@ -68,10 +68,10 @@
 
   <div class="field">
     <%= form.label :regular_holiday %>
-    <%= form.text_area :regular_holiday, id: :company_regular_holiday %>
+    <%= form.text_area :regular_holiday, id: :company_regular_holiday, :class => 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :class => 'btn btn-primary' %>
   </div>
 <% end %>
