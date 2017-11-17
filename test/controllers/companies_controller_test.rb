@@ -17,7 +17,7 @@ class CompaniesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create company" do
     assert_difference('Company.count') do
-      post companies_url, params: { company: { Inquiry_phone: @company.Inquiry_phone, city: @company.city, email: @company.email, end_time: @company.end_time, license_number: @company.license_number, main_phone: @company.main_phone, name: @company.name, open_time: @company.open_time, postal_code: @company.postal_code, prefecture: @company.prefecture, regular_holiday: @company.regular_holiday, street: @company.street } }
+      post companies_url, params: { company: { inquiry_phone: @company.inquiry_phone, city: @company.city, email: @company.email, end_time: @company.end_time, license_number: @company.license_number, main_phone: @company.main_phone, name: @company.name, open_time: @company.open_time, postal_code: @company.postal_code, prefecture: @company.prefecture, regular_holiday: @company.regular_holiday, street: @company.street } }
     end
 
     assert_redirected_to company_url(Company.last)
@@ -34,7 +34,7 @@ class CompaniesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update company" do
-    patch company_url(@company), params: { company: { Inquiry_phone: @company.Inquiry_phone, city: @company.city, email: @company.email, end_time: @company.end_time, license_number: @company.license_number, main_phone: @company.main_phone, name: @company.name, open_time: @company.open_time, postal_code: @company.postal_code, prefecture: @company.prefecture, regular_holiday: @company.regular_holiday, street: @company.street } }
+    patch company_url(@company), params: { company: { inquiry_phone: @company.inquiry_phone, city: @company.city, email: @company.email, end_time: @company.end_time, license_number: @company.license_number, main_phone: @company.main_phone, name: @company.name, open_time: @company.open_time, postal_code: @company.postal_code, prefecture: @company.prefecture, regular_holiday: @company.regular_holiday, street: @company.street } }
     assert_redirected_to company_url(@company)
   end
 
