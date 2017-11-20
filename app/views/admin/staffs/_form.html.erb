@@ -1,0 +1,117 @@
+<%= form_with(model: admin_staff, local: true) do |form| %>
+  <% if admin_staff.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin_staff.errors.count, "error") %> prohibited this admin_staff from being saved:</h2>
+
+      <ul>
+      <% admin_staff.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :company_id %>
+    <%= form.text_field :company_id, id: :admin_staff_company_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.text_area :picture, id: :admin_staff_picture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shooting_date %>
+    <%= form.date_select :shooting_date, id: :admin_staff_shooting_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :certificate_number %>
+    <%= form.text_field :certificate_number, id: :admin_staff_certificate_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_certificate_lifetime %>
+    <%= form.date_select :start_certificate_lifetime, id: :admin_staff_start_certificate_lifetime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_certificate_lifetime %>
+    <%= form.date_select :end_certificate_lifetime, id: :admin_staff_end_certificate_lifetime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :real_estate_notary %>
+    <%= form.check_box :real_estate_notary, id: :admin_staff_real_estate_notary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :admin_staff_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :admin_staff_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :furigana_last_name %>
+    <%= form.text_field :furigana_last_name, id: :admin_staff_furigana_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :furigana_first_name %>
+    <%= form.text_field :furigana_first_name, id: :admin_staff_furigana_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender, id: :admin_staff_gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birth %>
+    <%= form.date_select :birth, id: :admin_staff_birth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :home_phone %>
+    <%= form.text_field :home_phone, id: :admin_staff_home_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mobile_phone %>
+    <%= form.text_field :mobile_phone, id: :admin_staff_mobile_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postal_code %>
+    <%= form.number_field :postal_code, id: :admin_staff_postal_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prefecture %>
+    <%= form.text_field :prefecture, id: :admin_staff_prefecture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :admin_staff_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :street %>
+    <%= form.text_area :street, id: :admin_staff_street %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_area :email, id: :admin_staff_email %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

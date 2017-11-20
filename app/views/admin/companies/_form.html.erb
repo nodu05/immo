@@ -1,0 +1,77 @@
+<%= form_with(model: admin_company, local: true) do |form| %>
+  <% if admin_company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin_company.errors.count, "error") %> prohibited this admin_company from being saved:</h2>
+
+      <ul>
+      <% admin_company.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :admin_company_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :main_phone %>
+    <%= form.text_field :main_phone, id: :admin_company_main_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inquiry_phone %>
+    <%= form.text_field :inquiry_phone, id: :admin_company_inquiry_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postal_code %>
+    <%= form.number_field :postal_code, id: :admin_company_postal_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prefecture %>
+    <%= form.text_field :prefecture, id: :admin_company_prefecture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :admin_company_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :street %>
+    <%= form.text_area :street, id: :admin_company_street %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_area :email, id: :admin_company_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :license_number %>
+    <%= form.text_area :license_number, id: :admin_company_license_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :open_time %>
+    <%= form.time_select :open_time, id: :admin_company_open_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_time %>
+    <%= form.time_select :end_time, id: :admin_company_end_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :regular_holiday %>
+    <%= form.text_area :regular_holiday, id: :admin_company_regular_holiday %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

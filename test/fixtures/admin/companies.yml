@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  main_phone: MyString
+  inquiry_phone: MyString
+  postal_code: 1
+  prefecture: MyString
+  city: MyString
+  street: MyText
+  email: MyText
+  license_number: MyText
+  open_time: 2017-11-20 13:30:29
+  end_time: 2017-11-20 13:30:29
+  regular_holiday: MyText
+
+two:
+  name: MyString
+  main_phone: MyString
+  inquiry_phone: MyString
+  postal_code: 1
+  prefecture: MyString
+  city: MyString
+  street: MyText
+  email: MyText
+  license_number: MyText
+  open_time: 2017-11-20 13:30:29
+  end_time: 2017-11-20 13:30:29
+  regular_holiday: MyText

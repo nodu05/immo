@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Admin Staffs</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Picture</th>
+      <th>Shooting date</th>
+      <th>Certificate number</th>
+      <th>Start certificate lifetime</th>
+      <th>End certificate lifetime</th>
+      <th>Real estate notary</th>
+      <th>Last name</th>
+      <th>First name</th>
+      <th>Furigana last name</th>
+      <th>Furigana first name</th>
+      <th>Gender</th>
+      <th>Birth</th>
+      <th>Home phone</th>
+      <th>Mobile phone</th>
+      <th>Postal code</th>
+      <th>Prefecture</th>
+      <th>City</th>
+      <th>Street</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_staffs.each do |admin_staff| %>
+      <tr>
+        <td><%= admin_staff.company_id %></td>
+        <td><%= admin_staff.picture %></td>
+        <td><%= admin_staff.shooting_date %></td>
+        <td><%= admin_staff.certificate_number %></td>
+        <td><%= admin_staff.start_certificate_lifetime %></td>
+        <td><%= admin_staff.end_certificate_lifetime %></td>
+        <td><%= admin_staff.real_estate_notary %></td>
+        <td><%= admin_staff.last_name %></td>
+        <td><%= admin_staff.first_name %></td>
+        <td><%= admin_staff.furigana_last_name %></td>
+        <td><%= admin_staff.furigana_first_name %></td>
+        <td><%= admin_staff.gender %></td>
+        <td><%= admin_staff.birth %></td>
+        <td><%= admin_staff.home_phone %></td>
+        <td><%= admin_staff.mobile_phone %></td>
+        <td><%= admin_staff.postal_code %></td>
+        <td><%= admin_staff.prefecture %></td>
+        <td><%= admin_staff.city %></td>
+        <td><%= admin_staff.street %></td>
+        <td><%= admin_staff.email %></td>
+        <td><%= link_to 'Show', admin_staff %></td>
+        <td><%= link_to 'Edit', edit_admin_staff_path(admin_staff) %></td>
+        <td><%= link_to 'Destroy', admin_staff, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin Staff', new_admin_staff_path %>

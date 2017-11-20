@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @admin_company.name %>
+</p>
+
+<p>
+  <strong>Main phone:</strong>
+  <%= @admin_company.main_phone %>
+</p>
+
+<p>
+  <strong>Inquiry phone:</strong>
+  <%= @admin_company.inquiry_phone %>
+</p>
+
+<p>
+  <strong>Postal code:</strong>
+  <%= @admin_company.postal_code %>
+</p>
+
+<p>
+  <strong>Prefecture:</strong>
+  <%= @admin_company.prefecture %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @admin_company.city %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @admin_company.street %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @admin_company.email %>
+</p>
+
+<p>
+  <strong>License number:</strong>
+  <%= @admin_company.license_number %>
+</p>
+
+<p>
+  <strong>Open time:</strong>
+  <%= @admin_company.open_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @admin_company.end_time %>
+</p>
+
+<p>
+  <strong>Regular holiday:</strong>
+  <%= @admin_company.regular_holiday %>
+</p>
+
+<%= link_to 'Edit', edit_admin_company_path(@admin_company) %> |
+<%= link_to 'Back', admin_companies_path %>
