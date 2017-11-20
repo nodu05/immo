@@ -10,108 +10,108 @@
       </ul>
     </div>
   <% end %>
-
+  
   <div class="field">
-    <%= form.label :company_id %>
-    <%= form.text_field :company_id, id: :admin_staff_company_id %>
+    <%= form.label :営業所コード %>
+    <%= form.text_field :company_id, id: :admin_staff_company_id, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :picture %>
-    <%= form.text_area :picture, id: :admin_staff_picture %>
+    <%= form.label :顔写真 %>
+    <%= form.text_area :picture, id: :admin_staff_picture, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :shooting_date %>
-    <%= form.date_select :shooting_date, id: :admin_staff_shooting_date %>
+    <%= form.label :撮影年月日 %>
+    <%= form.date_select :shooting_date, id: :admin_staff_shooting_date, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :certificate_number %>
-    <%= form.text_field :certificate_number, id: :admin_staff_certificate_number %>
+    <%= form.label :従業者証明書番号 %>
+    <%= form.text_field :certificate_number, id: :admin_staff_certificate_number, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :start_certificate_lifetime %>
-    <%= form.date_select :start_certificate_lifetime, id: :admin_staff_start_certificate_lifetime %>
+    <%= form.label :証明書有効期間開始 %>
+    <%= form.date_select :start_certificate_lifetime, id: :admin_staff_start_certificate_lifetime, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :end_certificate_lifetime %>
-    <%= form.date_select :end_certificate_lifetime, id: :admin_staff_end_certificate_lifetime %>
+    <%= form.label :証明書有効期間終了 %>
+    <%= form.date_select :end_certificate_lifetime, id: :admin_staff_end_certificate_lifetime, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :real_estate_notary %>
-    <%= form.check_box :real_estate_notary, id: :admin_staff_real_estate_notary %>
+    <%= form.label :宅建士資格有無 %>
+    <%= form.check_box :real_estate_notary, id: :admin_staff_real_estate_notary, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, id: :admin_staff_last_name %>
+    <%= form.label :姓 %>
+    <%= form.text_field :last_name, id: :admin_staff_last_name, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, id: :admin_staff_first_name %>
+    <%= form.label :名 %>
+    <%= form.text_field :first_name, id: :admin_staff_first_name, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :furigana_last_name %>
-    <%= form.text_field :furigana_last_name, id: :admin_staff_furigana_last_name %>
+    <%= form.label :セイ %>
+    <%= form.text_field :furigana_last_name, id: :admin_staff_furigana_last_name, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :furigana_first_name %>
-    <%= form.text_field :furigana_first_name, id: :admin_staff_furigana_first_name %>
+    <%= form.label :メイ %>
+    <%= form.text_field :furigana_first_name, id: :admin_staff_furigana_first_name, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :gender %>
-    <%= form.text_field :gender, id: :admin_staff_gender %>
+    <%= form.label :性別 %>
+    <%= form.text_field :gender, id: :admin_staff_gender, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :birth %>
-    <%= form.date_select :birth, id: :admin_staff_birth %>
+    <%= form.label :生年月日 %>
+    <%= form.date_select :birth, id: :admin_staff_birth, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :home_phone %>
-    <%= form.text_field :home_phone, id: :admin_staff_home_phone %>
+    <%= form.label :電話番号 %>
+    <%= form.text_field :home_phone, id: :admin_staff_home_phone, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :mobile_phone %>
-    <%= form.text_field :mobile_phone, id: :admin_staff_mobile_phone %>
+    <%= form.label :携帯番号 %>
+    <%= form.text_field :mobile_phone, id: :admin_staff_mobile_phone, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :postal_code %>
-    <%= form.number_field :postal_code, id: :admin_staff_postal_code %>
+    <%= form.label :郵便番号 %>
+    <%= form.number_field :postal_code, id: :postal_code, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :prefecture %>
-    <%= form.text_field :prefecture, id: :admin_staff_prefecture %>
+    <%= form.label :都道府県 %>
+    <%= form.text_field :prefecture, id: :prefecture, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city, id: :admin_staff_city %>
+    <%= form.label :市区町村 %>
+    <%= form.text_field :city, id: :city, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :street %>
-    <%= form.text_area :street, id: :admin_staff_street %>
+    <%= form.label :番地 %>
+    <%= form.text_area :street, id: :street, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_area :email, id: :admin_staff_email %>
+    <%= form.label :メールアドレス %>
+    <%= form.text_area :email, id: :admin_staff_email, :class => 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :class => 'btn btn-primary' %>
   </div>
 <% end %>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'admin/dashboad'
-  get 'admin', to:'admin#dashboad'  
+  get 'admin/dashboard'
+  get 'admin', to:'admin#dashboard'  
 
   namespace :admin do
     resources :staffs
