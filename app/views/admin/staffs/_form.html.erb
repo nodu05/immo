@@ -62,7 +62,7 @@
 
   <div class="field form-inline">
     <%= form.label :性別 %>
-    <%= form.select :gender, [["不明", "不明"], ["男性", "男性"], ["女性", "女性"], ["その他", "その他"]] %>
+    <%= form.collection_select :gender, Admin::Select.where(content_id: "gender"), :return_text, :return_text %>
   </div>
 
   <div class="field form-inline">
