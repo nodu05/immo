@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :content_id %>
-    <%= form.text_field :content_id, id: :admin_select_content_id %>
+  <div class="field form-inline">
+    <%= form.label :項目 %>
+    <%= form.text_field :content_id, id: :admin_select_content_id, :class => 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :select_id %>
-    <%= form.number_field :select_id, id: :admin_select_select_id %>
+  <div class="field form-inline">
+    <%= form.label :No %>
+    <%= form.number_field :select_id, id: :admin_select_select_id, :class => 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :return_text %>
-    <%= form.text_area :return_text, id: :admin_select_return_text %>
+  <div class="field form-inline">
+    <%= form.label :項目名 %>
+    <%= form.text_area :return_text, id: :admin_select_return_text, :class => 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :更新, :class => 'btn btn-primary' %>
   </div>
 <% end %>
