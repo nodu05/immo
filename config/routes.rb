@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   namespace :admin do
+    resources :selects
+  end
+  namespace :admin do
     resources :customers
   end
   get 'admin/dashboard'

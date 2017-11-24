@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @admin_select.content_id %>
+</p>
+
+<p>
+  <strong>Select:</strong>
+  <%= @admin_select.select_id %>
+</p>
+
+<p>
+  <strong>Return text:</strong>
+  <%= @admin_select.return_text %>
+</p>
+
+<%= link_to 'Edit', edit_admin_select_path(@admin_select) %> |
+<%= link_to 'Back', admin_selects_path %>

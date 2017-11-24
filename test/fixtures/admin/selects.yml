@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content_id: MyString
+  select_id: 1
+  return_text: MyText
+
+two:
+  content_id: MyString
+  select_id: 1
+  return_text: MyText

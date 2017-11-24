@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Admin Selects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Select</th>
+      <th>Return text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_selects.each do |admin_select| %>
+      <tr>
+        <td><%= admin_select.content_id %></td>
+        <td><%= admin_select.select_id %></td>
+        <td><%= admin_select.return_text %></td>
+        <td><%= link_to 'Show', admin_select %></td>
+        <td><%= link_to 'Edit', edit_admin_select_path(admin_select) %></td>
+        <td><%= link_to 'Destroy', admin_select, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin Select', new_admin_select_path %>
