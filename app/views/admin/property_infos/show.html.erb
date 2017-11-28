@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Property type1:</strong>
+  <%= @admin_property_info.property_type1 %>
+</p>
+
+<p>
+  <strong>Property type2:</strong>
+  <%= @admin_property_info.property_type2 %>
+</p>
+
+<p>
+  <strong>Transaction type:</strong>
+  <%= @admin_property_info.transaction_type %>
+</p>
+
+<p>
+  <strong>Mediation date:</strong>
+  <%= @admin_property_info.mediation_date %>
+</p>
+
+<p>
+  <strong>Condition:</strong>
+  <%= @admin_property_info.condition %>
+</p>
+
+<p>
+  <strong>Supplementary explanation:</strong>
+  <%= @admin_property_info.supplementary_explanation %>
+</p>
+
+<%= link_to 'Edit', edit_admin_property_info_path(@admin_property_info) %> |
+<%= link_to 'Back', admin_property_infos_path %>

@@ -1,0 +1,177 @@
+<%= form_with(model: admin_property_traffic, local: true) do |form| %>
+  <% if admin_property_traffic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin_property_traffic.errors.count, "error") %> prohibited this admin_property_traffic from being saved:</h2>
+
+      <ul>
+      <% admin_property_traffic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :property_id %>
+    <%= form.number_field :property_id, id: :admin_property_traffic_property_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :route_name1 %>
+    <%= form.text_field :route_name1, id: :admin_property_traffic_route_name1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :station_name1 %>
+    <%= form.text_area :station_name1, id: :admin_property_traffic_station_name1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :station_walkm1 %>
+    <%= form.number_field :station_walkm1, id: :admin_property_traffic_station_walkm1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :station_walkd1 %>
+    <%= form.number_field :station_walkd1, id: :admin_property_traffic_station_walkd1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :station_car1 %>
+    <%= form.number_field :station_car1, id: :admin_property_traffic_station_car1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :station_bus1 %>
+    <%= form.number_field :station_bus1, id: :admin_property_traffic_station_bus1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :busstop_walkm1 %>
+    <%= form.number_field :busstop_walkm1, id: :admin_property_traffic_busstop_walkm1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :busstop_walkd1 %>
+    <%= form.number_field :busstop_walkd1, id: :admin_property_traffic_busstop_walkd1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :busroute_name1 %>
+    <%= form.text_area :busroute_name1, id: :admin_property_traffic_busroute_name1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :busstop_name1 %>
+    <%= form.text_area :busstop_name1, id: :admin_property_traffic_busstop_name1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :route_name2 %>
+    <%= form.text_field :route_name2, id: :admin_property_traffic_route_name2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :station_name2 %>
+    <%= form.text_area :station_name2, id: :admin_property_traffic_station_name2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :station_walkm2 %>
+    <%= form.number_field :station_walkm2, id: :admin_property_traffic_station_walkm2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :station_walkd2 %>
+    <%= form.number_field :station_walkd2, id: :admin_property_traffic_station_walkd2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :station_car2 %>
+    <%= form.number_field :station_car2, id: :admin_property_traffic_station_car2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :station_bus2 %>
+    <%= form.number_field :station_bus2, id: :admin_property_traffic_station_bus2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :busstop_walkm2 %>
+    <%= form.number_field :busstop_walkm2, id: :admin_property_traffic_busstop_walkm2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :busstop_walkd2 %>
+    <%= form.number_field :busstop_walkd2, id: :admin_property_traffic_busstop_walkd2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :busroute_name2 %>
+    <%= form.text_area :busroute_name2, id: :admin_property_traffic_busroute_name2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :busstop_name2 %>
+    <%= form.text_area :busstop_name2, id: :admin_property_traffic_busstop_name2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :route_name3 %>
+    <%= form.text_field :route_name3, id: :admin_property_traffic_route_name3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :station_name3 %>
+    <%= form.text_area :station_name3, id: :admin_property_traffic_station_name3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :station_walkm3 %>
+    <%= form.number_field :station_walkm3, id: :admin_property_traffic_station_walkm3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :station_walkd3 %>
+    <%= form.number_field :station_walkd3, id: :admin_property_traffic_station_walkd3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :station_car3 %>
+    <%= form.number_field :station_car3, id: :admin_property_traffic_station_car3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :station_bus3 %>
+    <%= form.number_field :station_bus3, id: :admin_property_traffic_station_bus3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :busstop_walkm3 %>
+    <%= form.number_field :busstop_walkm3, id: :admin_property_traffic_busstop_walkm3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :busstop_walkd3 %>
+    <%= form.number_field :busstop_walkd3, id: :admin_property_traffic_busstop_walkd3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :busroute_name3 %>
+    <%= form.text_area :busroute_name3, id: :admin_property_traffic_busroute_name3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :busstop_name3 %>
+    <%= form.text_area :busstop_name3, id: :admin_property_traffic_busstop_name3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :other_transportation %>
+    <%= form.text_area :other_transportation, id: :admin_property_traffic_other_transportation %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

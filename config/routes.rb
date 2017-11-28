@@ -1,5 +1,23 @@
 Rails.application.routes.draw do
   namespace :admin do
+    resources :property_details
+  end
+  namespace :admin do
+    resources :property_layouts
+  end
+  namespace :admin do
+    resources :property_traffics
+  end
+  namespace :admin do
+    resources :property_areas
+  end
+  namespace :admin do
+    resources :property_adresses
+  end
+  namespace :admin do
+    resources :property_infos
+  end
+  namespace :admin do
     resources :selects
   end
   namespace :admin do
