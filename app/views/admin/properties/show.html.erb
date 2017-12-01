@@ -1,0 +1,799 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>物件種別:</strong>
+  <%= @admin_property.property_type1 %>
+</p>
+
+<p>
+  <strong>物件種目:</strong>
+  <%= @admin_property.property_type2 %>
+</p>
+
+<p>
+  <strong>取引態様:</strong>
+  <%= @admin_property.transaction_type %>
+</p>
+
+<p>
+  <strong>媒介契約年月日:</strong>
+  <%= @admin_property.mediation_date %>
+</p>
+
+<p>
+  <strong>取引状況:</strong>
+  <%= @admin_property.condition %>
+</p>
+
+<p>
+  <strong>取引状況の説明:</strong>
+  <%= @admin_property.supplementary_explanation %>
+</p>
+
+<p>
+  <strong>都道府県:</strong>
+  <%= @admin_property.prefecture %>
+</p>
+
+<p>
+  <strong>市区町村:</strong>
+  <%= @admin_property.city %>
+</p>
+
+<p>
+  <strong>番地:</strong>
+  <%= @admin_property.street %>
+</p>
+
+<p>
+  <strong>番地表示:</strong>
+  <%= @admin_property.show_street %>
+</p>
+
+<p>
+  <strong>建物名:</strong>
+  <%= @admin_property.apartment_name %>
+</p>
+
+<p>
+  <strong>部屋番号:</strong>
+  <%= @admin_property.roomnumber %>
+</p>
+
+<p>
+  <strong>棟番号:</strong>
+  <%= @admin_property.buildingnumber %>
+</p>
+
+<p>
+  <strong>部屋番号表示:</strong>
+  <%= @admin_property.show_roomnumber %>
+</p>
+
+<p>
+  <strong>面積計測方式:</strong>
+  <%= @admin_property.measurement %>
+</p>
+
+<p>
+  <strong>土地面積（平米（私道を含まず））:</strong>
+  <%= @admin_property.land_area %>
+</p>
+
+<p>
+  <strong>専有面積（平米）:</strong>
+  <%= @admin_property.occupied_area %>
+</p>
+
+<p>
+  <strong>建物面積（平米）1:</strong>
+  <%= @admin_property.building_area1 %>
+</p>
+
+<p>
+  <strong>建物面積（平米）2:</strong>
+  <%= @admin_property.building_area2 %>
+</p>
+
+<p>
+  <strong>専有面積（平米）:</strong>
+  <%= @admin_property.occupied_area %>
+</p>
+
+<p>
+  <strong>バルコニー（平米）:</strong>
+  <%= @admin_property.balcony_area %>
+</p>
+
+<p>
+  <strong>テラス面積（平米）:</strong>
+  <%= @admin_property.terrace_area %>
+</p>
+
+<p>
+  <strong>専用庭面積（平米）:</strong>
+  <%= @admin_property.privategarden_area %>
+</p>
+
+<p>
+  <strong>私道負担有無:</strong>
+  <%= @admin_property.driveway_burden %>
+</p>
+
+<p>
+  <strong>私道面積（平米）:</strong>
+  <%= @admin_property.driveway_area %>
+</p>
+
+<p>
+  <strong>私道負担割合（／） :</strong>
+  <%= @admin_property.driveway_part1 %>
+</p>
+
+<p>
+  <strong>私道負担割合（平米／平米） :</strong>
+  <%= @admin_property.driveway_part2 %>
+</p>
+
+<p>
+  <strong>セットバック区分:</strong>
+  <%= @admin_property.setback_class %>
+</p>
+
+<p>
+  <strong>後退距離（m）:</strong>
+  <%= @admin_property.setback_distance %>
+</p>
+
+<p>
+  <strong>セットバック面積（平米）:</strong>
+  <%= @admin_property.setback_area %>
+</p>
+
+<p>
+  <strong>敷地延長:</strong>
+  <%= @admin_property.alleyground_class %>
+</p>
+
+<p>
+  <strong>敷地延長（平米）:</strong>
+  <%= @admin_property.alleyground_area %>
+</p>
+
+<p>
+  <strong>建物面積（１Ｆ（平米））:</strong>
+  <%= @admin_property.firstfloor_area %>
+</p>
+
+<p>
+  <strong>建物面積（２Ｆ（平米））:</strong>
+  <%= @admin_property.secondfloor_area %>
+</p>
+
+<p>
+  <strong>建物面積（３Ｆ（平米））:</strong>
+  <%= @admin_property.thirdfloor_area %>
+</p>
+
+<p>
+  <strong>建物面積（その他（平米））:</strong>
+  <%= @admin_property.otherfloor_area %>
+</p>
+
+<p>
+  <strong>開発面積／総面積（平米）1:</strong>
+  <%= @admin_property.development_area1 %>
+</p>
+
+<p>
+  <strong>販売総面積（平米）:</strong>
+  <%= @admin_property.total_area %>
+</p>
+
+<p>
+  <strong>販売区画数（区画）:</strong>
+  <%= @admin_property.subdivision %>
+</p>
+
+<p>
+  <strong>工事完了年月:</strong>
+  <%= @admin_property.construction_date %>
+</p>
+
+<p>
+  <strong>土地共有持分面積（平米）:</strong>
+  <%= @admin_property.coownership_area %>
+</p>
+
+<p>
+  <strong>土地共有持分（／）:</strong>
+  <%= @admin_property.coownership %>
+</p>
+
+<p>
+  <strong>開発面積／総面積（平米）2:</strong>
+  <%= @admin_property.development_area2 %>
+</p>
+
+<p>
+  <strong>建築面積（平米）:</strong>
+  <%= @admin_property.building_area3 %>
+</p>
+
+<p>
+  <strong>延べ面積（平米）:</strong>
+  <%= @admin_property.totalfloor_area %>
+</p>
+
+<p>
+  <strong>沿線名1:</strong>
+  <%= @admin_property.route_name1 %>
+</p>
+
+<p>
+  <strong>駅名1:</strong>
+  <%= @admin_property.station_name1 %>
+</p>
+
+<p>
+  <strong>駅より徒歩（m）1:</strong>
+  <%= @admin_property.station_walkm1 %>
+</p>
+
+<p>
+  <strong>駅より徒歩（分）1:</strong>
+  <%= @admin_property.station_walkd1 %>
+</p>
+
+<p>
+  <strong>駅より車（km）1:</strong>
+  <%= @admin_property.station_car1 %>
+</p>
+
+<p>
+  <strong>駅よりバス（分）1:</strong>
+  <%= @admin_property.station_bus1 %>
+</p>
+
+<p>
+  <strong>Busstop walkm1:</strong>
+  <%= @admin_property.busstop_walkm1 %>
+</p>
+
+<p>
+  <strong>バス停より徒歩（分）1:</strong>
+  <%= @admin_property.busstop_walkd1 %>
+</p>
+
+<p>
+  <strong>バス路線名1:</strong>
+  <%= @admin_property.busroute_name1 %>
+</p>
+
+<p>
+  <strong>バス停名1:</strong>
+  <%= @admin_property.busstop_name1 %>
+</p>
+
+<p>
+  <strong>沿線名2:</strong>
+  <%= @admin_property.route_name2 %>
+</p>
+
+<p>
+  <strong>駅名2:</strong>
+  <%= @admin_property.station_name2 %>
+</p>
+
+<p>
+  <strong>駅より徒歩（m）2:</strong>
+  <%= @admin_property.station_walkm2 %>
+</p>
+
+<p>
+  <strong>駅より徒歩（分）2:</strong>
+  <%= @admin_property.station_walkd2 %>
+</p>
+
+<p>
+  <strong>駅より車（km）2:</strong>
+  <%= @admin_property.station_car2 %>
+</p>
+
+<p>
+  <strong>駅よりバス（分）2:</strong>
+  <%= @admin_property.station_bus2 %>
+</p>
+
+<p>
+  <strong>Busstop walkm2:</strong>
+  <%= @admin_property.busstop_walkm2 %>
+</p>
+
+<p>
+  <strong>バス停より徒歩（分）2:</strong>
+  <%= @admin_property.busstop_walkd2 %>
+</p>
+
+<p>
+  <strong>バス路線名2:</strong>
+  <%= @admin_property.busroute_name2 %>
+</p>
+
+<p>
+  <strong>バス停名2:</strong>
+  <%= @admin_property.busstop_name2 %>
+</p>
+
+<p>
+  <strong>沿線名3:</strong>
+  <%= @admin_property.route_name3 %>
+</p>
+
+<p>
+  <strong>駅名3:</strong>
+  <%= @admin_property.station_name3 %>
+</p>
+
+<p>
+  <strong>駅より徒歩（m）3:</strong>
+  <%= @admin_property.station_walkm3 %>
+</p>
+
+<p>
+  <strong>駅より徒歩（分）3:</strong>
+  <%= @admin_property.station_walkd3 %>
+</p>
+
+<p>
+  <strong>駅より車（km）3:</strong>
+  <%= @admin_property.station_car3 %>
+</p>
+
+<p>
+  <strong>駅よりバス（分）3:</strong>
+  <%= @admin_property.station_bus3 %>
+</p>
+
+<p>
+  <strong>Busstop walkm3:</strong>
+  <%= @admin_property.busstop_walkm3 %>
+</p>
+
+<p>
+  <strong>バス停より徒歩（分）3:</strong>
+  <%= @admin_property.busstop_walkd3 %>
+</p>
+
+<p>
+  <strong>バス路線名3:</strong>
+  <%= @admin_property.busroute_name3 %>
+</p>
+
+<p>
+  <strong>バス停名3:</strong>
+  <%= @admin_property.busstop_name3 %>
+</p>
+
+<p>
+  <strong>その他交通手段:</strong>
+  <%= @admin_property.other_transportation %>
+</p>
+
+<p>
+  <strong>間取タイプ:</strong>
+  <%= @admin_property.floor_plan %>
+</p>
+
+<p>
+  <strong>間取部屋数:</strong>
+  <%= @admin_property.room %>
+</p>
+
+<p>
+  <strong>角部屋:</strong>
+  <%= @admin_property.corner_room %>
+</p>
+
+<p>
+  <strong>部屋所在階1:</strong>
+  <%= @admin_property.room_level1 %>
+</p>
+
+<p>
+  <strong>部屋タイプ1:</strong>
+  <%= @admin_property.room_type1 %>
+</p>
+
+<p>
+  <strong>部屋広さ1:</strong>
+  <%= @admin_property.room_size1 %>
+</p>
+
+<p>
+  <strong>部屋所在階2:</strong>
+  <%= @admin_property.room_level2 %>
+</p>
+
+<p>
+  <strong>部屋タイプ2:</strong>
+  <%= @admin_property.room_type2 %>
+</p>
+
+<p>
+  <strong>部屋広さ2:</strong>
+  <%= @admin_property.room_size2 %>
+</p>
+
+<p>
+  <strong>部屋所在階3:</strong>
+  <%= @admin_property.room_level3 %>
+</p>
+
+<p>
+  <strong>部屋タイプ3:</strong>
+  <%= @admin_property.room_type3 %>
+</p>
+
+<p>
+  <strong>部屋広さ3:</strong>
+  <%= @admin_property.room_size3 %>
+</p>
+
+<p>
+  <strong>部屋所在階4:</strong>
+  <%= @admin_property.room_level4 %>
+</p>
+
+<p>
+  <strong>部屋タイプ4:</strong>
+  <%= @admin_property.room_type4 %>
+</p>
+
+<p>
+  <strong>部屋広さ4:</strong>
+  <%= @admin_property.room_size4 %>
+</p>
+
+<p>
+  <strong>部屋所在階5:</strong>
+  <%= @admin_property.room_level5 %>
+</p>
+
+<p>
+  <strong>部屋タイプ5:</strong>
+  <%= @admin_property.room_type5 %>
+</p>
+
+<p>
+  <strong>部屋広さ5:</strong>
+  <%= @admin_property.room_size5 %>
+</p>
+
+<p>
+  <strong>部屋所在階6:</strong>
+  <%= @admin_property.room_level6 %>
+</p>
+
+<p>
+  <strong>部屋タイプ6:</strong>
+  <%= @admin_property.room_type6 %>
+</p>
+
+<p>
+  <strong>部屋広さ6:</strong>
+  <%= @admin_property.room_size6 %>
+</p>
+
+<p>
+  <strong>部屋所在階7:</strong>
+  <%= @admin_property.room_level7 %>
+</p>
+
+<p>
+  <strong>部屋タイプ7:</strong>
+  <%= @admin_property.room_type7 %>
+</p>
+
+<p>
+  <strong>部屋広さ7:</strong>
+  <%= @admin_property.room_size7 %>
+</p>
+
+<p>
+  <strong>部屋所在階8</strong>
+  <%= @admin_property.room_leve8 %>
+</p>
+
+<p>
+  <strong>部屋タイプ8:</strong>
+  <%= @admin_property.room_type8 %>
+</p>
+
+<p>
+  <strong>部屋広さ8:</strong>
+  <%= @admin_property.room_size8 %>
+</p>
+
+<p>
+  <strong>部屋所在階9:</strong>
+  <%= @admin_property.room_level9 %>
+</p>
+
+<p>
+  <strong>部屋タイプ9:</strong>
+  <%= @admin_property.room_type9 %>
+</p>
+
+<p>
+  <strong>部屋広さ9:</strong>
+  <%= @admin_property.room_size9 %>
+</p>
+
+<p>
+  <strong>その他部屋情報:</strong>
+  <%= @admin_property.other_room %>
+</p>
+
+<p>
+  <strong>価格:</strong>
+  <%= @admin_property.price %>
+</p>
+
+<p>
+  <strong>内消費税:</strong>
+  <%= @admin_property.consumption_tax %>
+</p>
+
+<p>
+  <strong>現況:</strong>
+  <%= @admin_property.situation %>
+</p>
+
+<p>
+  <strong>現況年月日:</strong>
+  <%= @admin_property.situation_date %>
+</p>
+
+<p>
+  <strong>引渡時期:</strong>
+  <%= @admin_property.transfer %>
+</p>
+
+<p>
+  <strong>引渡年月:</strong>
+  <%= @admin_property.transfer_date %>
+</p>
+
+<p>
+  <strong>入居年月日:</strong>
+  <%= @admin_property.move_date %>
+</p>
+
+<p>
+  <strong>報酬形態:</strong>
+  <%= @admin_property.remuneration %>
+</p>
+
+<p>
+  <strong>手数料割合率:</strong>
+  <%= @admin_property.fee_part %>
+</p>
+
+<p>
+  <strong>手数料額:</strong>
+  <%= @admin_property.fee_amount %>
+</p>
+
+<p>
+  <strong>都市計画:</strong>
+  <%= @admin_property.town_plan %>
+</p>
+
+<p>
+  <strong>登記簿地目:</strong>
+  <%= @admin_property.register_landcategory %>
+</p>
+
+<p>
+  <strong>現況地目:</strong>
+  <%= @admin_property.situation_landcategory %>
+</p>
+
+<p>
+  <strong>用途地域1:</strong>
+  <%= @admin_property.zoning1 %>
+</p>
+
+<p>
+  <strong>用途地域2:</strong>
+  <%= @admin_property.zoning2 %>
+</p>
+
+<p>
+  <strong>最適用途:</strong>
+  <%= @admin_property.optimum %>
+</p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @admin_property._site %>
+</p>
+
+<p>
+  <strong>地域地区:</strong>
+  <%= @admin_property.zoning_district %>
+</p>
+
+<p>
+  <strong>建蔽率:</strong>
+  <%= @admin_property.buildingcoverage_ratio %>
+</p>
+
+<p>
+  <strong>容積率:</strong>
+  <%= @admin_property.floorarea_ratio %>
+</p>
+
+<p>
+  <strong>容積率の制限内容:</strong>
+  <%= @admin_property.floorarea_restriction %>
+</p>
+
+<p>
+  <strong>その他の法令上の制限:</strong>
+  <%= @admin_property.law_restriction %>
+</p>
+
+<p>
+  <strong>再建築不可:</strong>
+  <%= @admin_property.rebuilding %>
+</p>
+
+<p>
+  <strong>国土法届出:</strong>
+  <%= @admin_property.nationalland_law %>
+</p>
+
+<p>
+  <strong>建築確認:</strong>
+  <%= @admin_property.buildingcertification %>
+</p>
+
+<p>
+  <strong>建築確認番号:</strong>
+  <%= @admin_property.buildingcertification_number %>
+</p>
+
+<p>
+  <strong>土地権利:</strong>
+  <%= @admin_property.land_title %>
+</p>
+
+<p>
+  <strong>地勢:</strong>
+  <%= @admin_property.terrain %>
+</p>
+
+<p>
+  <strong>建築条件:</strong>
+  <%= @admin_property.architectural_condition %>
+</p>
+
+<p>
+  <strong>接道状況:</strong>
+  <%= @admin_property.connecting_road %>
+</p>
+
+<p>
+  <strong>接道舗装:</strong>
+  <%= @admin_property.paved_road %>
+</p>
+
+<p>
+  <strong>接道種別1:</strong>
+  <%= @admin_property.road_class1 %>
+</p>
+
+<p>
+  <strong>接道接面（ｍ）1:</strong>
+  <%= @admin_property.contact_distance1 %>
+</p>
+
+<p>
+  <strong>接道位置指定1:</strong>
+  <%= @admin_property.designation_road1 %>
+</p>
+
+<p>
+  <strong>接道方向1:</strong>
+  <%= @admin_property.road_direction1 %>
+</p>
+
+<p>
+  <strong>接道幅員（ｍ）1:</strong>
+  <%= @admin_property.road_width1 %>
+</p>
+
+<p>
+  <strong>接道種別2:</strong>
+  <%= @admin_property.road_class2 %>
+</p>
+
+<p>
+  <strong>接道接面（ｍ）2:</strong>
+  <%= @admin_property.contact_distance2 %>
+</p>
+
+<p>
+  <strong>接道位置指定2:</strong>
+  <%= @admin_property.designation_road2 %>
+</p>
+
+<p>
+  <strong>接道方向2:</strong>
+  <%= @admin_property.road_direction2 %>
+</p>
+
+<p>
+  <strong>接道幅員（ｍ）2:</strong>
+  <%= @admin_property.road_width2 %>
+</p>
+
+<p>
+  <strong>接道種別3:</strong>
+  <%= @admin_property.road_class3 %>
+</p>
+
+<p>
+  <strong>接道接面（ｍ）3:</strong>
+  <%= @admin_property.contact_distance3 %>
+</p>
+
+<p>
+  <strong>接道位置指定3:</strong>
+  <%= @admin_property.designation_road3 %>
+</p>
+
+<p>
+  <strong>接道方向3:</strong>
+  <%= @admin_property.road_direction3 %>
+</p>
+
+<p>
+  <strong>接道幅員（ｍ）3:</strong>
+  <%= @admin_property.road_width3 %>
+</p>
+
+<p>
+  <strong>接道種別4:</strong>
+  <%= @admin_property.road_class4 %>
+</p>
+
+<p>
+  <strong>接道接面（ｍ）4:</strong>
+  <%= @admin_property.contact_distance4 %>
+</p>
+
+<p>
+  <strong>接道位置指定4:</strong>
+  <%= @admin_property.designation_road4 %>
+</p>
+
+<p>
+  <strong>接道方向4:</strong>
+  <%= @admin_property.road_direction4 %>
+</p>
+
+<p>
+  <strong>接道幅員（ｍ）4:</strong>
+  <%= @admin_property.road_width4 %>
+</p>
+
+<p>
+  <strong>管理組合有無:</strong>
+  <%= @admin_property.homeowner_association %>
+</p>
+
+<%= link_to '修正', edit_admin_property_path(@admin_property) %> |
+<%= link_to '戻る', admin_properties_path %>

@@ -1,2 +1,0 @@
-json.extract! admin_property_layout, :id, :property_id, :floor_plan, :room, :corner_room, :room_level1, :room_type1, :room_size1, :room_level2, :room_type2, :room_size2, :room_level3, :room_type3, :room_size3, :room_level4, :room_type4, :room_size4, :room_level5, :room_type5, :room_size5, :room_level6, :room_type6, :room_size6, :room_level7, :room_type7, :room_size7, :room_leve8, :room_type8, :room_size8, :room_level9, :room_type9, :room_size9, :other_room, :created_at, :updated_at
-json.url admin_property_layout_url(admin_property_layout, format: :json)

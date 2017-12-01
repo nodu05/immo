@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   namespace :admin do
+    resources :properties
+  end
+  namespace :admin do
     resources :property_details
   end
   namespace :admin do
