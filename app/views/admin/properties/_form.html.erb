@@ -14,20 +14,20 @@
   <h2>分類</h2>
   <div class="field row">
     <div class="col-sm-3 col-xs-6">
-      <%= form.label :物件種別 %>
-      <%= form.text_field :property_type1, id: :admin_property_property_type1, :class => 'form-control' %>
+      <%= form.label :物件種別 %><br />
+      <%= form.collection_select :property_type1, Admin::Select.where(content_id: "property_type1"), :return_text, :return_text %>
     </div>
     <div class="col-sm-3 col-xs-6">
-      <%= form.label :物件種目 %>
-      <%= form.text_field :property_type2, id: :admin_property_property_type2, :class => 'form-control' %>
+      <%= form.label :物件種目 %><br />
+      <%= form.collection_select :property_type2, Admin::Select.where(content_id: "property_type2"), :return_text, :return_text %>
     </div>
 　</div>
 
   <h2>取引</h2>
   <div class="field row">
     <div class="col-sm-3 col-xs-6">
-      <%= form.label :取引態様 %>    
-      <%= form.text_field :transaction_type, id: :admin_property_transaction_type, :class => 'form-control' %>
+      <%= form.label :取引態様 %><br />
+      <%= form.collection_select :transaction_type, Admin::Select.where(content_id: "transaction_type"), :return_text, :return_text %>
     </div>
     <div class="col-sm-3 col-xs-6">
       <%= form.label :媒介契約年月日 %>
@@ -57,8 +57,8 @@
     </div>
     
     <div class="col-sm-3 col-xs-6">
-      <%= form.label :土地権利 %>
-      <%= form.text_field :land_title, id: :admin_property_land_title, :class => 'form-control' %>
+      <%= form.label :土地権利 %><br />
+      <%= form.collection_select :land_title, Admin::Select.where(content_id: "land_title"), :return_text, :return_text %>
     </div>
   </div>
 <ul class="nav nav-tabs nav-justified">
@@ -122,8 +122,8 @@
   <h4 class="bg-info">基本情報</h4>
     <div class="field row">
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :面積計測方式 %>
-        <%= form.text_field :measurement, id: :admin_property_measurement, :class => 'form-control' %>
+        <%= form.label :面積計測方式 %><br />
+        <%= form.collection_select :measurement, Admin::Select.where(content_id: "measurement"), :return_text, :return_text %>
       </div>
       <div class="col-sm-3 col-xs-6">
         <%= form.label :土地面積（平米） %>
@@ -156,8 +156,8 @@
       </div>
 
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :私道負担 %>
-        <%= form.text_field :driveway_burden, id: :admin_property_driveway_burden, :class => 'form-control' %>
+        <%= form.label :私道負担 %><br />
+        <%= form.collection_select :driveway_burden, Admin::Select.where(content_id: "umu"), :return_text, :return_text %>
       </div>
       <div class="col-sm-3 col-xs-6">
         <%= form.label :私道面積（平米） %>
@@ -173,8 +173,8 @@
       </div>
 
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :セットバック %>
-        <%= form.text_field :setback_class, id: :admin_property_setback_class, :class => 'form-control' %>
+        <%= form.label :セットバック %><br />
+        <%= form.collection_select :setback_class, Admin::Select.where(content_id: "setback"), :return_text, :return_text %>
       </div>
       <div class="col-sm-3 col-xs-6">
         <%= form.label :後退距離（ｍ） %>
@@ -184,10 +184,11 @@
         <%= form.label :セットバック面積（平米） %>
         <%= form.number_field :setback_area, id: :admin_property_setback_area, :class => 'form-control' %>
       </div>
-
+    </div>
+    <div class="field row">
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :敷地延長 %>
-        <%= form.text_field :alleyground_class, id: :admin_property_alleyground_class, :class => 'form-control' %>
+        <%= form.label :敷地延長 %><br />
+        <%= form.collection_select :alleyground_class, Admin::Select.where(content_id: "umu"), :return_text, :return_text %>
       </div>
       <div class="col-sm-3 col-xs-6">
         <%= form.label :敷地延長（平米） %>
@@ -421,8 +422,8 @@
   <h4 class="bg-info">基本情報</h4>
     <div class="field row">
       <div class="col-xs-4">
-        <%= form.label :間取タイプ %>
-        <%= form.text_field :floor_plan, id: :admin_property_floor_plan, :class => 'form-control' %>
+        <%= form.label :間取タイプ %><br>
+        <%= form.collection_select :floor_plan, Admin::Select.where(content_id: "floor_plan"), :return_text, :return_text, :include_blank => true %>
       </div>
 
       <div class="col-xs-4">
@@ -443,8 +444,8 @@
         <%= form.number_field :room_level1, id: :admin_property_room_level1, :class => 'form-control' %>
       </div>
       <div class="col-xs-4">
-        <%= form.label :部屋タイプ１ %>
-        <%= form.text_field :room_type1, id: :admin_property_room_type1, :class => 'form-control' %>
+        <%= form.label :部屋タイプ１ %><br>
+        <%= form.collection_select :room_type1, Admin::Select.where(content_id: "room_type"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-xs-4">
         <%= form.label :部屋広さ１（畳） %>
@@ -456,8 +457,8 @@
         <%= form.number_field :room_level2, id: :admin_property_room_level2, :class => 'form-control' %>
       </div>
       <div class="col-xs-4">
-        <%= form.label :部屋タイプ２ %>
-        <%= form.text_field :room_type2, id: :admin_property_room_type2, :class => 'form-control' %>
+        <%= form.label :部屋タイプ２ %><br>
+        <%= form.collection_select :room_type2, Admin::Select.where(content_id: "room_type"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-xs-4">
         <%= form.label :部屋広さ２（畳） %>
@@ -469,8 +470,8 @@
         <%= form.number_field :room_level3, id: :admin_property_room_level3, :class => 'form-control' %>
       </div>
       <div class="col-xs-4">
-        <%= form.label :部屋タイプ３ %>
-        <%= form.text_field :room_type3, id: :admin_property_room_type3, :class => 'form-control' %>
+        <%= form.label :部屋タイプ３ %><br>
+        <%= form.collection_select :room_type3, Admin::Select.where(content_id: "room_type"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-xs-4">
         <%= form.label :部屋広さ３（畳） %>
@@ -482,8 +483,8 @@
         <%= form.number_field :room_level4, id: :admin_property_room_level4, :class => 'form-control' %>
       </div>
       <div class="col-xs-4">
-        <%= form.label :部屋タイプ４ %>
-        <%= form.text_field :room_type4, id: :admin_property_room_type4, :class => 'form-control' %>
+        <%= form.label :部屋タイプ４ %><br>
+        <%= form.collection_select :room_type4, Admin::Select.where(content_id: "room_type"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-xs-4">
         <%= form.label :部屋広さ４（畳） %>
@@ -495,8 +496,8 @@
         <%= form.number_field :room_level5, id: :admin_property_room_level5, :class => 'form-control' %>
       </div>
       <div class="col-xs-4">
-        <%= form.label :部屋タイプ５ %>
-        <%= form.text_field :room_type5, id: :admin_property_room_type5, :class => 'form-control' %>
+        <%= form.label :部屋タイプ５ %><br>
+        <%= form.collection_select :room_type5, Admin::Select.where(content_id: "room_type"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-xs-4">
         <%= form.label :部屋広さ５（畳） %>
@@ -508,8 +509,8 @@
         <%= form.number_field :room_level6, id: :admin_property_room_level6, :class => 'form-control' %>
       </div>
       <div class="col-xs-4">
-        <%= form.label :部屋タイプ６ %>
-        <%= form.text_field :room_type6, id: :admin_property_room_type6, :class => 'form-control' %>
+        <%= form.label :部屋タイプ６ %><br>
+        <%= form.collection_select :room_type6, Admin::Select.where(content_id: "room_type"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-xs-4">
         <%= form.label :部屋広さ６（畳） %>
@@ -521,8 +522,8 @@
         <%= form.number_field :room_level7, id: :admin_property_room_level7, :class => 'form-control' %>
       </div>
       <div class="col-xs-4">
-        <%= form.label :部屋タイプ７ %>
-        <%= form.text_field :room_type7, id: :admin_property_room_type7, :class => 'form-control' %>
+        <%= form.label :部屋タイプ７ %><br>
+        <%= form.collection_select :room_type7, Admin::Select.where(content_id: "room_type"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-xs-4">
         <%= form.label :部屋広さ７（畳） %>
@@ -534,8 +535,8 @@
         <%= form.number_field :room_leve8, id: :admin_property_room_leve8, :class => 'form-control' %>
       </div>
       <div class="col-xs-4">
-        <%= form.label :部屋タイプ８ %>
-        <%= form.text_field :room_type8, id: :admin_property_room_type8, :class => 'form-control' %>
+        <%= form.label :部屋タイプ８ %><br>
+        <%= form.collection_select :room_type8, Admin::Select.where(content_id: "room_type"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-xs-4">
         <%= form.label :部屋広さ８（畳） %>
@@ -547,14 +548,13 @@
         <%= form.number_field :room_level9, id: :admin_property_room_level9, :class => 'form-control' %>
       </div>
       <div class="col-xs-4">
-        <%= form.label :部屋タイプ９ %>
-        <%= form.text_field :room_type9, id: :admin_property_room_type9, :class => 'form-control' %>
+        <%= form.label :部屋タイプ９ %><br>
+        <%= form.collection_select :room_type9, Admin::Select.where(content_id: "room_type"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-xs-4">
         <%= form.label :部屋広さ９（畳） %>
         <%= form.number_field :room_size9, id: :admin_property_room_size9, :class => 'form-control' %>
       </div>
-
       <div class="col-sm-12">
         <%= form.label :その他部屋情報 %>
         <%= form.text_field :other_room, id: :admin_property_other_room, :class => 'form-control' %>
@@ -566,8 +566,8 @@
   <h2>現況</h2>
     <div class="field row">
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :現況 %>
-        <%= form.text_field :situation, id: :admin_property_situation, :class => 'form-control' %>
+        <%= form.label :現況 %><br>
+        <%= form.collection_select :situation, Admin::Select.where(content_id: "situation"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-6">
         <%= form.label :現況年月日 %>
@@ -580,8 +580,8 @@
   <h2>引渡</h2>
     <div class="field row">
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :引渡時期 %>
-        <%= form.text_field :transfer, id: :admin_property_transfer, :class => 'form-control' %>
+        <%= form.label :引渡時期 %><br>
+        <%= form.collection_select :transfer, Admin::Select.where(content_id: "transfer"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-6">
         <%= form.label :引渡年月 %>
@@ -598,8 +598,8 @@
   <h2>報酬・負担割合</h2>
     <div class="field row">
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :報酬形態 %>
-        <%= form.text_field :remuneration, id: :admin_property_remuneration, :class => 'form-control' %>
+        <%= form.label :報酬形態 %><br>
+        <%= form.collection_select :remuneration, Admin::Select.where(content_id: "remuneration"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-6">
         <%= form.label :手数料割合率 %>
@@ -616,33 +616,39 @@
   <h2>法規</h2>
     <div class="field row">
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :都市計画 %>
-        <%= form.text_field :town_plan, id: :admin_property_town_plan, :class => 'form-control' %>
+        <%= form.label :都市計画 %><br>
+        <%= form.collection_select :town_plan, Admin::Select.where(content_id: "town_plan"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :登記簿地目 %>
-        <%= form.text_field :register_landcategory, id: :admin_property_register_landcategory, :class => 'form-control' %>
+        <%= form.label :登記簿地目 %><br>
+        <%= form.collection_select :register_landcategory, Admin::Select.where(content_id: "landcategory"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :現況地目 %>
-        <%= form.text_field :situation_landcategory, id: :admin_property_situation_landcategory, :class => 'form-control' %>
+        <%= form.label :現況地目 %><br>
+        <%= form.collection_select :situation_landcategory, Admin::Select.where(content_id: "landcategory"), :return_text, :return_text, :include_blank => true %>
+      </div>
+    </div>
+
+    <div class="field row">
+      <div class="col-sm-3 col-xs-6">
+        <%= form.label :用途地域１ %><br>
+        <%= form.collection_select :zoning1, Admin::Select.where(content_id: "zoning"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :用途地域１ %>
-        <%= form.text_field :zoning1, id: :admin_property_zoning1, :class => 'form-control' %>
+        <%= form.label :用途地域２ %><br>
+        <%= form.collection_select :zoning2, Admin::Select.where(content_id: "zoning"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :用途地域２ %>
-        <%= form.text_field :zoning2, id: :admin_property_zoning2, :class => 'form-control' %>
+        <%= form.label :最適用途 %><br>
+        <%= form.collection_select :optimum, Admin::Select.where(content_id: "optimum_site"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :最適用途 %>
-        <%= form.text_field :optimum, id: :admin_property_optimum, :class => 'form-control' %>
+        <%= form.label :地域地区 %><br>
+        <%= form.collection_select :zoning_district, Admin::Select.where(content_id: "zoning_district"), :return_text, :return_text, :include_blank => true %>
       </div>
-      <div class="col-sm-3 col-xs-6">
-        <%= form.label :地域地区 %>
-        <%= form.text_field :zoning_district, id: :admin_property_zoning_district, :class => 'form-control' %>
-      </div>
+    </div>
+    
+    <div class="field row">      
       <div class="col-sm-3 col-xs-6">
         <%= form.label :建蔽率 %>
         <%= form.number_field :buildingcoverage_ratio, id: :admin_property_buildingcoverage_ratio, :class => 'form-control' %>
@@ -659,17 +665,20 @@
         <%= form.label :その他法令上の制限 %>
         <%= form.text_field :law_restriction, id: :admin_property_law_restriction, :class => 'form-control' %>
       </div>
+    </div>
+      
+    <div class="field row">      
       <div class="col-sm-3 col-xs-6">
         <%= form.label :再建築 %>
         <%= form.check_box :rebuilding, id: :admin_property_rebuilding, :class => 'form-control' %>
       </div>
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :国土法届出 %>
-        <%= form.text_field :nationalland_law, id: :admin_property_nationalland_law, :class => 'form-control' %>
+        <%= form.label :国土法届出 %><br>
+        <%= form.collection_select :nationalland_law, Admin::Select.where(content_id: "nationalland_law"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :建築確認コード %>
-        <%= form.text_field :buildingcertification, id: :admin_property_buildingcertification, :class => 'form-control' %>
+        <%= form.label :建築確認コード %><br>
+        <%= form.collection_select :buildingcertification, Admin::Select.where(content_id: "buildingcertification"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-6">
         <%= form.label :建築確認番号 %>
@@ -682,30 +691,30 @@
   <h2>接道</h2>
     <div class="field row">
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :状況 %>
-        <%= form.text_field :connecting_road, id: :admin_property_connecting_road, :class => 'form-control' %>
+        <%= form.label :状況 %><br>
+        <%= form.collection_select :connecting_road, Admin::Select.where(content_id: "connecting_road"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-6">
-        <%= form.label :舗装 %>
-        <%= form.text_field :paved_road, id: :admin_property_paved_road, :class => 'form-control' %>
+        <%= form.label :舗装 %><br>
+        <%= form.collection_select :paved_road, Admin::Select.where(content_id: "umu"), :return_text, :return_text, :include_blank => true %>
       </div>
     </div>
     <div class="field row">
       <div class="col-sm-2 col-xs-6">
-        <%= form.label :種別１ %>
-        <%= form.text_field :road_class1, id: :admin_property_road_class1, :class => 'form-control' %>
+        <%= form.label :種別１ %><br>
+        <%= form.collection_select :road_class1, Admin::Select.where(content_id: "road_class"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-6">
         <%= form.label :接面１（ｍ） %>
         <%= form.number_field :contact_distance1, id: :admin_property_contact_distance1, :class => 'form-control' %>
       </div>
       <div class="col-sm-2 col-xs-4">
-        <%= form.label :位置指定１ %>
-        <%= form.text_field :designation_road1, id: :admin_property_designation_road1, :class => 'form-control' %>
+        <%= form.label :位置指定１ %><br>
+        <%= form.collection_select :designation_road1, Admin::Select.where(content_id: "umu"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-2 col-xs-3">
-        <%= form.label :方向１ %>
-        <%= form.text_field :road_direction1, id: :admin_property_road_direction1, :class => 'form-control' %>
+        <%= form.label :方向１ %><br>
+        <%= form.collection_select :road_direction1, Admin::Select.where(content_id: "direction"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-5">
         <%= form.label :幅員１（ｍ） %>
@@ -713,20 +722,20 @@
       </div>
 
       <div class="col-sm-2 col-xs-6">
-        <%= form.label :種別２ %>
-        <%= form.text_field :road_class2, id: :admin_property_road_class2, :class => 'form-control' %>
+        <%= form.label :種別２ %><br>
+        <%= form.collection_select :road_class2, Admin::Select.where(content_id: "road_class"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-6">
         <%= form.label :接面２（ｍ） %>
         <%= form.number_field :contact_distance2, id: :admin_property_contact_distance2, :class => 'form-control' %>
       </div>
       <div class="col-sm-2 col-xs-4">
-        <%= form.label :位置指定２ %>
-        <%= form.text_field :designation_road2, id: :admin_property_designation_road2, :class => 'form-control' %>
+        <%= form.label :位置指定２ %><br>
+        <%= form.collection_select :designation_road2, Admin::Select.where(content_id: "umu"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-2 col-xs-3">
-        <%= form.label :方向２ %>
-        <%= form.text_field :road_direction2, id: :admin_property_road_direction2, :class => 'form-control' %>
+        <%= form.label :方向２ %><br>
+        <%= form.collection_select :road_direction2, Admin::Select.where(content_id: "direction"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-5">
         <%= form.label :幅員２（ｍ） %>
@@ -734,20 +743,20 @@
       </div>
 
       <div class="col-sm-2 col-xs-6">
-        <%= form.label :種別３ %>
-        <%= form.text_field :road_class3, id: :admin_property_road_class3, :class => 'form-control' %>
+        <%= form.label :種別３ %><br>
+        <%= form.collection_select :road_class3, Admin::Select.where(content_id: "road_class"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-6">
         <%= form.label :接面３（ｍ） %>
         <%= form.number_field :contact_distance3, id: :admin_property_contact_distance3, :class => 'form-control' %>
       </div>
       <div class="col-sm-2 col-xs-4">
-        <%= form.label :位置指定３ %>
-        <%= form.text_field :designation_road3, id: :admin_property_designation_road3, :class => 'form-control' %>
+        <%= form.label :位置指定３ %><br>
+        <%= form.collection_select :designation_road3, Admin::Select.where(content_id: "umu"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-2 col-xs-3">
-        <%= form.label :方向３ %>
-        <%= form.text_field :road_direction3, id: :admin_property_road_direction3, :class => 'form-control' %>
+        <%= form.label :方向３ %><br>
+        <%= form.collection_select :road_direction3, Admin::Select.where(content_id: "direction"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-5">
         <%= form.label :幅員３（ｍ） %>
@@ -755,26 +764,25 @@
       </div>
 
       <div class="col-sm-2 col-xs-6">
-        <%= form.label :種別４ %>
-        <%= form.text_field :road_class4, id: :admin_property_road_class4, :class => 'form-control' %>
+        <%= form.label :種別４ %><br>
+        <%= form.collection_select :road_class4, Admin::Select.where(content_id: "road_class"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-6">
         <%= form.label :接面４（ｍ） %>
         <%= form.number_field :contact_distance4, id: :admin_property_contact_distance4, :class => 'form-control' %>
       </div>
       <div class="col-sm-2 col-xs-4">
-        <%= form.label :位置指定４ %>
-        <%= form.text_field :designation_road4, id: :admin_property_designation_road4, :class => 'form-control' %>
+        <%= form.label :位置指定４ %><br>
+        <%= form.collection_select :designation_road4, Admin::Select.where(content_id: "umu"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-2 col-xs-3">
-        <%= form.label :方向４ %>
-        <%= form.text_field :road_direction4, id: :admin_property_road_direction4, :class => 'form-control' %>
+        <%= form.label :方向４ %><br>
+        <%= form.collection_select :road_direction4, Admin::Select.where(content_id: "direction"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-5">
         <%= form.label :幅員４（ｍ） %>
         <%= form.number_field :road_width4, id: :admin_property_road_width4, :class => 'form-control' %>
       </div>
-
     </div>
   </div>
 
@@ -782,16 +790,16 @@
   <h2>以外</h2>
     <div class="field row">
       <div class="col-xs-4">
-        <%= form.label :地勢 %>
-        <%= form.text_field :terrain, id: :admin_property_terrain, :class => 'form-control' %>
+        <%= form.label :地勢 %><br>
+        <%= form.collection_select :terrain, Admin::Select.where(content_id: "terrain"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-xs-4">
-        <%= form.label :建築条件 %>
-        <%= form.text_field :architectural_condition, id: :admin_property_architectural_condition, :class => 'form-control' %>
+        <%= form.label :建築条件 %><br>
+        <%= form.collection_select :architectural_condition, Admin::Select.where(content_id: "umu"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-xs-4">
-        <%= form.label :管理組合 %>
-        <%= form.text_field :homeowner_association, id: :admin_property_homeowner_association, :class => 'form-control' %>
+        <%= form.label :管理組合 %><br>
+        <%= form.collection_select :homeowner_association, Admin::Select.where(content_id: "umu"), :return_text, :return_text, :include_blank => true %>
       </div>
     </div>
   </div>
