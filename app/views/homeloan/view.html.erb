@@ -1,0 +1,54 @@
+<h1>【住宅ローン】シミュレーション</h1>
+<h3><%= @msg1 %></h3>
+
+<table class="table table-bordered">
+    <tr>
+        <th class="info"><%= @ask1 %></th>
+        <td><%= text_field_tag :loan, '', size: 30 %><span> 万円</span></td>
+    </tr>
+    <tr>
+        <th><%= @ask2 %></th>
+        <td>
+        <%= radio_button :bonus, 'はい', class: :rd %> はい
+        <%= radio_button :bonus, 'はい', class: :rd %> いいえ
+        </td>
+    </tr>
+    <tr>
+        <th><%= @ask3 %></th>
+        <td><%= text_field_tag :loan_bonus, '', size: 30 %><span> 万円</span></td>
+    </tr>
+    <tr>
+        <th><%= @ask4 %></th>
+        <td></td>
+    </tr>
+    <tr>
+        <th><%= @ask5 %></th>
+        <td></td>
+    </tr>
+    <tr>
+        <th><%= @ask6 %></th>
+        <td><%= text_field_tag :interest_rate_b, '', size: 30 %><span> ％</span></td>
+    </tr>
+    <tr>
+        <th><%= @ask7 %></th>
+        <td><%= text_field_tag :interest_rate_a, '', size: 30 %><span> ％</span></td>
+    </tr>
+</table>
+
+<section class="result row">
+    <div>
+        <%= @ans1 %>
+    </div>
+
+    <div>
+        <%= @ans2 %>
+    </div>
+
+    <div>
+        <%= @ans3 %>
+    </div>
+
+    <div>
+        <%= @ans4 %>
+    </div>
+</div>
