@@ -1,37 +1,40 @@
 <h1>【住宅ローン】シミュレーション</h1>
 <h3><%= @msg1 %></h3>
 
+<div id="canvas"></div>
+
 <table class="table table-bordered">
     <tr>
         <th class="info"><%= @ask1 %></th>
-        <td><%= text_field_tag :loan, '', size: 30 %><span> 万円</span></td>
+        <td><%= number_field_tag :loan, '', size: 30 %><span> 万円</span></td>
     </tr>
-    <tr>
+    <tr id="sample">
         <th><%= @ask2 %></th>
         <td>
-        <%= radio_button :bonus, 'はい', class: :rd %> はい
-        <%= radio_button :bonus, 'はい', class: :rd %> いいえ
+            <%= radio_button 'increase', 'bonus', 'no', {:checked => true} %> いいえ
+            <%= radio_button 'increase', 'bonus', 'yes', {} %> はい
         </td>
     </tr>
+
     <tr>
         <th><%= @ask3 %></th>
-        <td><%= text_field_tag :loan_bonus, '', size: 30 %><span> 万円</span></td>
+        <td><%= number_field_tag :loan_bonus, '', size: 30 %><span> 万円</span></td>
     </tr>
     <tr>
         <th><%= @ask4 %></th>
-        <td></td>
+        <td><%= number_field_tag :period, '35', size: 30 %><span> 年</span></td>
     </tr>
     <tr>
         <th><%= @ask5 %></th>
-        <td></td>
+        <td><%= text_field_tag :rate_type, '', size: 30 %><span> </span></td>
     </tr>
     <tr>
         <th><%= @ask6 %></th>
-        <td><%= text_field_tag :interest_rate_b, '', size: 30 %><span> ％</span></td>
+        <td><%= number_field_tag :interest_rate_b, '0.96', size: 30 %><span> ％</span></td>
     </tr>
     <tr>
         <th><%= @ask7 %></th>
-        <td><%= text_field_tag :interest_rate_a, '', size: 30 %><span> ％</span></td>
+        <td><%= number_field_tag :interest_rate_a, '', size: 30 %><span> ％</span></td>
     </tr>
 </table>
 
@@ -52,3 +55,5 @@
         <%= @ans4 %>
     </div>
 </div>
+
+
