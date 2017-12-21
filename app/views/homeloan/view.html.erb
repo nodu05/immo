@@ -1,12 +1,10 @@
 <h1>【住宅ローン】シミュレーション</h1>
 <h3><%= @msg1 %></h3>
 
-<div id="canvas"></div>
-
 <table class="table table-bordered">
     <tr>
         <th class="info"><%= @ask1 %></th>
-        <td><%= number_field_tag :loan, '', size: 30 %><span> 万円</span></td>
+        <td><%= number_field_tag :loan1, '', size: 30 %><span> 万円</span></td>
     </tr>
     <tr id="sample">
         <th><%= @ask2 %></th>
@@ -22,7 +20,7 @@
     </tr>
     <tr>
         <th><%= @ask4 %></th>
-        <td><%= number_field_tag :period, '35', size: 30 %><span> 年</span></td>
+        <td><%= number_field_tag :period1, '35', size: 30 %><span> 年</span></td>
     </tr>
     <tr>
         <th><%= @ask5 %></th>
@@ -30,7 +28,7 @@
     </tr>
     <tr>
         <th><%= @ask6 %></th>
-        <td><%= number_field_tag :interest_rate_b, '0.96', size: 30 %><span> ％</span></td>
+        <td><%= number_field_tag :interest_rate_b1, nil, step: 0.01, size: 30 %><span> ％</span></td>
     </tr>
     <tr>
         <th><%= @ask7 %></th>
@@ -38,22 +36,67 @@
     </tr>
 </table>
 
-<section class="result row">
-    <div>
-        <%= @ans1 %>
-    </div>
+<%= button_tag '計算する', id: "calc1", class: "btn btn-primary", type: "button" %>
 
-    <div>
-        <%= @ans2 %>
-    </div>
+<section class="result">
+<table class="table table-bordered">
+    <tr>
+        <th><%= @ans1ttl %></th>
+        <td><div id="interest_rate1"></div></td>
+    </tr>
+    <tr>
+        <th><%= @ans2ttl %></th>
+        <td><div id="repayment"></div></td>
+    </tr>
 
-    <div>
-        <%= @ans3 %>
-    </div>
+    <tr>
+        <th><%= @ans3ttl %></th>
+        <td><div id="total_interest"></div></td>
+    </tr>
 
-    <div>
-        <%= @ans4 %>
-    </div>
-</div>
+    <tr>
+        <th><%= @ans4ttl %></th>
+        <td></td>
+    </tr>
+
+    <tr>
+        <th><%= @ans5ttl %></th>
+        <td></td>
+    </tr>
+</table>
+
+
+
+<h3><%= @msg2 %></h3>
+<table class="table table-bordered">
+    <tr>
+        <th class="info"><%= @ask8 %></th>
+        <td><%= number_field_tag :loan2, '', size: 30 %><span> 万円</span></td>
+    </tr>
+    <tr>
+        <th><%= @ask4 %></th>
+        <td><%= number_field_tag :period2, '35', size: 30 %><span> 年</span></td>
+    </tr>
+    <tr>
+        <th><%= @ask6 %></th>
+        <td><%= number_field_tag :interest_rate_b2, nil, step: 0.01, size: 30 %><span> ％</span></td>
+    </tr>
+</table>
+
+<%= button_tag '計算する', id: "calc2", class: "btn btn-primary", type: "button" %>
+  
+<div></div>
+<section class="result">
+<table class="table table-bordered">
+    <tr>
+        <th><%= @ans1ttl %></th>
+        <td><div id="interest_rate2"></div></td>
+    </tr>
+    <tr>
+        <th><%= @ans6ttl %></th>
+        <td><div id="borrowing"></div></td>
+    </tr>
+</table>
+
 
 
