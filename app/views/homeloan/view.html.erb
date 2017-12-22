@@ -3,8 +3,8 @@
 
 <table class="table table-bordered">
     <tr>
-        <th class="info"><%= @ask1 %></th>
-        <td><%= number_field_tag :loan1, '', size: 30 %><span> 万円</span></td>
+        <th><%= @ask1 %></th>
+        <td><%= number_field_tag :loan1, '2000', size: 30 %><span> 万円</span></td>
     </tr>
     <tr id="sample">
         <th><%= @ask2 %></th>
@@ -16,7 +16,7 @@
 
     <tr>
         <th><%= @ask3 %></th>
-        <td><%= number_field_tag :loan_bonus, '', size: 30 %><span> 万円</span></td>
+        <td><%= number_field_tag :loan_bonus, '', size: 30, :disabled => true %><span> 万円</span></td>
     </tr>
     <tr>
         <th><%= @ask4 %></th>
@@ -24,54 +24,62 @@
     </tr>
     <tr>
         <th><%= @ask5 %></th>
-        <td><%= text_field_tag :rate_type, '', size: 30 %><span> </span></td>
+        <td><%= collection_select(:rate, :type, Admin::Select.where(content_id: "rate_type"), :select_id, :return_text) %></td>
     </tr>
     <tr>
         <th><%= @ask6 %></th>
-        <td><%= number_field_tag :interest_rate_b1, nil, step: 0.01, size: 30 %><span> ％</span></td>
+        <td><%= number_field_tag :interest_rate_b1, '1.0', step: 0.01, size: 30 %><span> ％</span></td>
     </tr>
+    
+    <% if false %>
     <tr>
         <th><%= @ask7 %></th>
         <td><%= number_field_tag :interest_rate_a, '', size: 30 %><span> ％</span></td>
     </tr>
+    <% end %>
+   
 </table>
 
 <%= button_tag '計算する', id: "calc1", class: "btn btn-primary", type: "button" %>
 
+<hr>
+<h3>シミュレーション結果</h3>
 <section class="result">
 <table class="table table-bordered">
     <tr>
         <th><%= @ans1ttl %></th>
-        <td><div id="interest_rate1"></div></td>
-    </tr>
-    <tr>
         <th><%= @ans2ttl %></th>
-        <td><div id="repayment"></div></td>
-    </tr>
-
-    <tr>
         <th><%= @ans3ttl %></th>
-        <td><div id="total_interest"></div></td>
-    </tr>
-
-    <tr>
         <th><%= @ans4ttl %></th>
-        <td></td>
     </tr>
-
     <tr>
-        <th><%= @ans5ttl %></th>
-        <td></td>
+        <td><div id="repayment"></div></td>
+        <td><div id="total_interest"></div></td>
+        <td><div id="bonus_repayment"></div></td>
+        <td><div id="repayment_y"></div></td>
     </tr>
 </table>
 
+<table class="table table-bordered">
+    <h3>償還表</h3>
+    <thead>
+        <tr>
+            <td>回数</td>
+            <td>年月</td>
+            <td>返済金額</td>
+            <td>残元金</td>
+        </tr>
+    </thead>
+    <tbody id="redemption"></tbody>
+</table>
 
+<hr>
 
 <h3><%= @msg2 %></h3>
 <table class="table table-bordered">
     <tr>
         <th class="info"><%= @ask8 %></th>
-        <td><%= number_field_tag :loan2, '', size: 30 %><span> 万円</span></td>
+        <td><%= number_field_tag :loan2, '100', size: 30 %><span> 万円</span></td>
     </tr>
     <tr>
         <th><%= @ask4 %></th>
@@ -79,19 +87,16 @@
     </tr>
     <tr>
         <th><%= @ask6 %></th>
-        <td><%= number_field_tag :interest_rate_b2, nil, step: 0.01, size: 30 %><span> ％</span></td>
+        <td><%= number_field_tag :interest_rate_b2, '1.0', step: 0.01, size: 30 %><span> ％</span></td>
     </tr>
 </table>
 
 <%= button_tag '計算する', id: "calc2", class: "btn btn-primary", type: "button" %>
   
-<div></div>
+<hr>
+
 <section class="result">
 <table class="table table-bordered">
-    <tr>
-        <th><%= @ans1ttl %></th>
-        <td><div id="interest_rate2"></div></td>
-    </tr>
     <tr>
         <th><%= @ans6ttl %></th>
         <td><div id="borrowing"></div></td>

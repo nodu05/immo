@@ -14,11 +14,10 @@ class HomeloanController < ApplicationController
         @ask6 = '金利を入力してください。'
         @ask7 = '当初金利適用期間後の金利を入力してください。'
         
-        @ans1ttl = 'お借入れ金利'
-        @ans2ttl = '毎月のご返済額'
-        @ans3ttl = '支払利息の合計金額'
-        @ans4ttl = '増額（ボーナス）月のご返済額（年2回）'
-        @ans5ttl = '年間のご返済額'
+        @ans1ttl = '毎月のご返済額'
+        @ans2ttl = '支払利息の合計金額'
+        @ans3ttl = '増額（ボーナス）月のご返済額（年2回）'
+        @ans4ttl = '年間のご返済額'
 
 
         @msg2 = '年間返済可能額から、借り入れ可能金額をシミュレーションします。'       
