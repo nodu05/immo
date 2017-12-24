@@ -1,6 +1,5 @@
 class CreateAdminSelects < ActiveRecord::Migration[5.1]
   def change
-    drop_table :admin_selects
     create_table :admin_selects do |t|
       t.string :content_id
       t.integer :select_id
