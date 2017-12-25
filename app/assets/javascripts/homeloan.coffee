@@ -29,7 +29,8 @@ setActivateConnection = (triggerSelector, activeValue, disabledValue, targetSele
 
 $ ->
   $("#calc1").click ->
-    alert "ここで計算処理をする"
+    $("#redemption").text("")
+    # alert "ここで計算処理をする"
 
     loan = parseInt($('#loan1').val())                          # 借入希望金額
     bonus = document.getElementById('increase_bonus_no')        # ボーナス返済有無
@@ -62,6 +63,9 @@ $ ->
         repayment_y = repayment * 12
         $("#repayment_y").text(repayment_y + " 円")
 
+        # 最終支払い時の残元金
+        f = Math.floor(((1 + getsuri) ** (kaisu) )* kariire - (repayment * ((1 + getsuri) ** (kaisu) - 1) / getsuri))
+      
         # 償還表
         tbody = document.getElementById('redemption')
         i = 0
@@ -86,12 +90,15 @@ $ ->
 
           # 返済金額
           td = document.createElement('td')
-          td.innerHTML = repayment
+          if i <= 0
+            td.innerHTML = repayment + f
+          else
+            td.innerHTML = repayment
           tbody.appendChild td
           
           # 残元金
           td = document.createElement('td')
-          remaining_funds = Math.floor(((1 + getsuri) ** (i + 1) )* kariire - (repayment * ((1 + getsuri) ** (i + 1) - 1) / getsuri))
+          remaining_funds = Math.floor(((1 + getsuri) ** (i + 1) )* kariire - (repayment * ((1 + getsuri) ** (i + 1) - 1) / getsuri) - f)
           td.innerHTML = remaining_funds
           tbody.appendChild td
           
@@ -104,10 +111,6 @@ $ ->
         bonus_kaisu = period * 2                                # ボーナス返済回数
         bonus_hensai = loan_bonus * (10 ** 4)                   # ボーナス分借入額
         bonus_kariire = kariire - bonus_hensai                  # ボーナス借入を除く借入額
-
-        alert bonus_hensai
-        alert bonus_kariire
-
 
         # 毎月返済額 ＝ 借入額 × {月利（1＋月利）返済回数 /（1＋月利）返済回数 － 1}
         repayment = Math.floor(bonus_kariire * getsuri * (1 + getsuri)**(kaisu) / ((1 + getsuri)**(kaisu) - 1))
@@ -127,6 +130,11 @@ $ ->
         # 年間返済額
         repayment_y = repayment * 12 + bonus_repayment * 2
         $("#repayment_y").text(repayment_y + " 円")
+
+        # 最終支払い時の残元金
+        fa = Math.floor(((1 + getsuri) ** (kaisu) )* bonus_kariire - (repayment * ((1 + getsuri) ** (kaisu) - 1) / getsuri))
+        fb = Math.floor(((1 + getsuri) ** (bonus_kaisu) )* bonus_hensai - (bonus_repayment * ((1 + getsuri) ** (bonus_kaisu) - 1) / getsuri))
+        f = fa + fb
 
         # 償還表
         tbody = document.getElementById('redemption')
@@ -154,9 +162,15 @@ $ ->
           # 返済金額
           td = document.createElement('td')
           if date_m == 1 or date_m == 7
-            td.innerHTML = repayment + bonus_repayment
+            if i <= 0
+              td.innerHTML = repayment + bonus_repayment + f
+            else  
+              td.innerHTML = repayment + bonus_repayment
           else
-            td.innerHTML = repayment
+            if i <= 0
+              td.innerHTML = repayment + f
+            else 
+              td.innerHTML = repayment 
           tbody.appendChild td
           
           # 残元金
@@ -168,9 +182,9 @@ $ ->
           remaining_funds1 = Math.floor(((1 + getsuri) ** (i + 1) )* bonus_kariire - (repayment * ((1 + getsuri) ** (i + 1) - 1) / getsuri))
 
           if j <= 0
-            remaining_funds = remaining_funds1 + bonus_hensai
+            remaining_funds = remaining_funds1 + bonus_hensai - f
           else
-            remaining_funds = remaining_funds1 + remaining_funds2
+            remaining_funds = remaining_funds1 + remaining_funds2 - f
           # remaining_funds = Math.floor(((1 + getsuri) ** (i + 1) )* kariire - (repayment * ((1 + getsuri) ** (i + 1) - 1) / getsuri))
           td.innerHTML = remaining_funds
           tbody.appendChild td
