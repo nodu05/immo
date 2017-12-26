@@ -185,7 +185,6 @@ $ ->
             remaining_funds = remaining_funds1 + bonus_hensai - f
           else
             remaining_funds = remaining_funds1 + remaining_funds2 - f
-          # remaining_funds = Math.floor(((1 + getsuri) ** (i + 1) )* kariire - (repayment * ((1 + getsuri) ** (i + 1) - 1) / getsuri))
           td.innerHTML = remaining_funds
           tbody.appendChild td
           
@@ -196,8 +195,113 @@ $ ->
 
     else
       if bonus.checked                                          # 元金均等返済かつボーナス返済なし
+        # 支払利息の合計金額 ＝ 借入金額 / 返済回数　* (返済回数 + 1) * 返済回数 / 2 * 月利
+        total_interest = Math.floor(kariire / kaisu * (kaisu + 1) * kaisu / 2 * getsuri)
+        $("#total_interest").text(total_interest + " 円")
         
+        # 増額（ボーナス）月のご返済額（年2回）
+        $("#bonus_repayment").text("ー")   
+
+        # 年間返済額
+        # repayment_y = repayment * 12
+        # $("#repayment_y").text(repayment_y + " 円")
+
+        # 償還表
+        tbody = document.getElementById('redemption')
+        i = 0
+        while i < kaisu
+
+          #tr エレメントを新規作成(ただ生成するだけ)
+          tr = document.createElement('tr')
+        
+          # 返済回数        
+          td = document.createElement('td')
+          td.innerHTML = (i + 1)
+          tbody.appendChild td
+
+          # 返済年月
+          date_y = date.getFullYear() 
+          date_m = date.getMonth()+1 
+          payment_date = date_y + "/" + date_m
+          td = document.createElement('td')
+          td.innerHTML = payment_date
+          test = date.setMonth(date.getMonth()+1);
+          tbody.appendChild td
+
+          # 各回返済額 ＝ 借入額 × {1 + (返済回数 - 計算対象の回数 + 1) * 月利} / 返済回数
+          td = document.createElement('td')
+          repayment = Math.floor((kariire * (1 + (kaisu - (i + 1) + 1) * getsuri)) / kaisu)
+          td.innerHTML = repayment
+          tbody.appendChild td
+          
+          # 残元金
+          td = document.createElement('td')
+          remaining_funds = Math.floor(kariire - (kariire / kaisu) * (i + 1))
+          td.innerHTML = remaining_funds
+          tbody.appendChild td
+          
+          tbody.appendChild tr
+          i++
+
+        return   
+
       else                                                      # 元金均等返済かつボーナス返済あり
+        bonus_kaisu = period * 2                                # ボーナス返済回数
+        bonus_hensai = loan_bonus * (10 ** 4)                   # ボーナス分借入額
+        bonus_kariire = kariire - bonus_hensai                  # ボーナス借入を除く借入額
+
+        # 償還表
+        tbody = document.getElementById('redemption')
+        i = 0
+        j = 0
+        while i < kaisu
+
+          #tr エレメントを新規作成(ただ生成するだけ)
+          tr = document.createElement('tr')
+        
+          # 返済回数        
+          td = document.createElement('td')
+          td.innerHTML = (i + 1)
+          tbody.appendChild td
+
+          # 返済年月
+          date_y = date.getFullYear() 
+          date_m = date.getMonth()+1
+          payment_date = date_y + "/" + date_m
+          td = document.createElement('td')
+          td.innerHTML = payment_date
+          test = date.setMonth(date.getMonth()+1);
+          tbody.appendChild td
+
+          # 返済金額
+          td = document.createElement('td')
+          repayment = Math.floor((bonus_kariire * (1 + (kaisu - (i + 1) + 1) * getsuri)) / kaisu)
+          if date_m == 1 or date_m == 7
+            bonus_repayment = Math.floor((bonus_hensai * (1 + (bonus_kaisu - (j + 1) + 1) * getsuri)) / bonus_kaisu)
+            td.innerHTML = repayment + bonus_repayment
+          else
+            td.innerHTML = repayment
+          tbody.appendChild td
+          
+          # 残元金
+          td = document.createElement('td')
+          remaining_funds1 = Math.floor(bonus_kariire - (bonus_kariire / kaisu) * (i + 1))
+          if date_m == 1 or date_m == 7
+            remaining_funds2 = Math.floor(bonus_hensai - (bonus_hensai / bonus_kaisu) * (j + 1))
+            j++
+          if j <= 0
+            remaining_funds = remaining_funds1 + bonus_hensai
+          else
+            remaining_funds = remaining_funds1 + remaining_funds2
+          if i >= kaisu - 1
+            remaining_funds = 0
+          td.innerHTML = remaining_funds
+          tbody.appendChild td
+          
+          tbody.appendChild tr
+          i++
+
+        return
 
   return
 
