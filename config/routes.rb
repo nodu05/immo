@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   namespace :admin do
     resources :properties
   end
@@ -26,8 +28,6 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :customers
   end
-  get 'admin/dashboard'
-  get 'admin', to:'admin#dashboard'  
 
   namespace :admin do
     resources :staffs
@@ -36,6 +36,9 @@ Rails.application.routes.draw do
     resources :companies
   end
  
+
+  get 'admin/dashboard'
+  get 'admin', to:'admin#dashboard'
   get 'homeloan/index'
   get 'homeloan/simulator', to: 'homeloan#view'
 
