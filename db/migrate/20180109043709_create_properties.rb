@@ -23,14 +23,14 @@ class CreateProperties < ActiveRecord::Migration[5.1]
       t.integer :balcony_area
       t.integer :terrace_area
       t.integer :privategarden_area
-      t.integer :driveway_burden
+      t.string :driveway_burden
       t.integer :driveway_area
       t.string :driveway_part1
       t.string :driveway_part2
-      t.integer :setback_class
+      t.string :setback_class
       t.integer :setback_distance
       t.integer :setback_area
-      t.integer :alleyground_class
+      t.string :alleyground_class
       t.integer :alleyground_area
       t.integer :firstfloor_area
       t.integer :secondfloor_area
@@ -137,26 +137,26 @@ class CreateProperties < ActiveRecord::Migration[5.1]
       t.string :architectural_condition
       t.string :connecting_road
       t.string :paved_road
-      t.string :roed_class1
+      t.string :road_class1
       t.integer :contact_distance1
       t.string :designation_road1
-      t.string :roed_direction1
-      t.integer :roed_width1
-      t.string :roed_class2
+      t.string :road_direction1
+      t.integer :road_width1
+      t.string :road_class2
       t.integer :contact_distance2
       t.string :designation_road2
-      t.string :roed_direction2
-      t.integer :roed_width2
-      t.string :roed_class3
+      t.string :road_direction2
+      t.integer :road_width2
+      t.string :road_class3
       t.integer :contact_distance3
       t.string :designation_road3
-      t.string :roed_direction3
-      t.integer :roed_width3
-      t.string :roed_class4
+      t.string :road_direction3
+      t.integer :road_width3
+      t.string :road_class4
       t.integer :contact_distance4
       t.string :designation_road4
-      t.string :roed_direction4
-      t.integer :roed_width4
+      t.string :road_direction4
+      t.integer :road_width4
       t.string :homeowner_association
 
       t.timestamps
