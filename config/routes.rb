@@ -1,40 +1,11 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    resources :properties
-  end
-  namespace :admin do
-    resources :property_details
-  end
-  namespace :admin do
-    resources :property_layouts
-  end
-  namespace :admin do
-    resources :property_traffics
-  end
-  namespace :admin do
-    resources :property_areas
-  end
-  namespace :admin do
-    resources :property_adresses
-  end
-  namespace :admin do
-    resources :property_infos
-  end
-  namespace :admin do
-    resources :selects
-  end
-  namespace :admin do
-    resources :customers
-  end
-  get 'admin/dashboard'
-  get 'admin', to:'admin#dashboard'  
-
-  namespace :admin do
-    resources :staffs
-  end
-  namespace :admin do
-    resources :companies
-  end
+  resources :properties
+  resources :customers
+  resources :staffs
+  resources :selects
+  resources :companies
+  # get 'admin/dashboard'
+  # get 'admin', to:'admin#dashboard'
  
   get 'homeloan/index'
   get 'homeloan/simulator', to: 'homeloan#view'

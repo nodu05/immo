@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_id: MyString
+  picture: MyText
+  shooting_date: 2018-01-09
+  certificate_number: MyString
+  start_certificate_lifetime: 2018-01-09
+  end_certificate_lifetime: 2018-01-09
+  real_estate_notary: false
+  last_name: MyString
+  first_name: MyString
+  furigana_last_name: MyString
+  furigana_first_name: MyString
+  gender: MyString
+  birth: 2018-01-09
+  home_phone: MyString
+  mobile_phone: MyString
+  postal_code: 1
+  prefecture: MyString
+  city: MyString
+  street: MyText
+  email: MyText
+
+two:
+  company_id: MyString
+  picture: MyText
+  shooting_date: 2018-01-09
+  certificate_number: MyString
+  start_certificate_lifetime: 2018-01-09
+  end_certificate_lifetime: 2018-01-09
+  real_estate_notary: false
+  last_name: MyString
+  first_name: MyString
+  furigana_last_name: MyString
+  furigana_first_name: MyString
+  gender: MyString
+  birth: 2018-01-09
+  home_phone: MyString
+  mobile_phone: MyString
+  postal_code: 1
+  prefecture: MyString
+  city: MyString
+  street: MyText
+  email: MyText

@@ -3,27 +3,27 @@
 one:
   name: MyString
   main_phone: 1
-  Inquiry_phone: 1
+  inquiry_phone: 1
   postal_code: 1
   prefecture: MyString
   city: MyString
   street: MyText
   email: MyText
   license_number: MyText
-  open_time: 2017-11-17 11:51:39
-  end_time: 2017-11-17 11:51:39
+  open_time: 2018-01-09 11:47:59
+  end_time: 2018-01-09 11:47:59
   regular_holiday: MyText
 
 two:
   name: MyString
   main_phone: 1
-  Inquiry_phone: 1
+  inquiry_phone: 1
   postal_code: 1
   prefecture: MyString
   city: MyString
   street: MyText
   email: MyText
   license_number: MyText
-  open_time: 2017-11-17 11:51:39
-  end_time: 2017-11-17 11:51:39
+  open_time: 2018-01-09 11:47:59
+  end_time: 2018-01-09 11:47:59
   regular_holiday: MyText

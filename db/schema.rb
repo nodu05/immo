@@ -10,26 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171201071621) do
+ActiveRecord::Schema.define(version: 20180109031357) do
 
-  create_table "active_admin_comments", force: :cascade do |t|
-    t.string "namespace"
-    t.text "body"
-    t.string "resource_type"
-    t.integer "resource_id"
-    t.string "author_type"
-    t.integer "author_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
-    t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
-    t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
-  end
-
-  create_table "admin_companies", force: :cascade do |t|
+  create_table "companies", force: :cascade do |t|
     t.string "name"
-    t.string "main_phone"
-    t.string "inquiry_phone"
+    t.integer "main_phone"
+    t.integer "inquiry_phone"
     t.integer "postal_code"
     t.string "prefecture"
     t.string "city"
@@ -43,7 +29,7 @@ ActiveRecord::Schema.define(version: 20171201071621) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "admin_customers", force: :cascade do |t|
+  create_table "customers", force: :cascade do |t|
     t.string "last_name"
     t.string "first_name"
     t.string "furigana_last_name"
@@ -61,7 +47,7 @@ ActiveRecord::Schema.define(version: 20171201071621) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "admin_properties", force: :cascade do |t|
+  create_table "properties", force: :cascade do |t|
     t.string "property_type1"
     t.string "property_type2"
     t.string "transaction_type"
@@ -78,20 +64,20 @@ ActiveRecord::Schema.define(version: 20171201071621) do
     t.boolean "show_roomnumber"
     t.string "measurement"
     t.integer "land_area"
-    t.integer "occupied_area"
     t.integer "building_area1"
     t.integer "building_area2"
+    t.integer "occupied_area"
     t.integer "balcony_area"
     t.integer "terrace_area"
     t.integer "privategarden_area"
-    t.string "driveway_burden"
+    t.integer "driveway_burden"
     t.integer "driveway_area"
     t.string "driveway_part1"
     t.string "driveway_part2"
-    t.string "setback_class"
+    t.integer "setback_class"
     t.integer "setback_distance"
     t.integer "setback_area"
-    t.string "alleyground_class"
+    t.integer "alleyground_class"
     t.integer "alleyground_area"
     t.integer "firstfloor_area"
     t.integer "secondfloor_area"
@@ -161,7 +147,7 @@ ActiveRecord::Schema.define(version: 20171201071621) do
     t.integer "room_level7"
     t.string "room_type7"
     t.integer "room_size7"
-    t.integer "room_leve8"
+    t.integer "room_level8"
     t.string "room_type8"
     t.integer "room_size8"
     t.integer "room_level9"
@@ -183,8 +169,7 @@ ActiveRecord::Schema.define(version: 20171201071621) do
     t.string "situation_landcategory"
     t.string "zoning1"
     t.string "zoning2"
-    t.string "optimum"
-    t.string "_site"
+    t.string "optimum_site"
     t.string "zoning_district"
     t.integer "buildingcoverage_ratio"
     t.integer "floorarea_ratio"
@@ -199,32 +184,32 @@ ActiveRecord::Schema.define(version: 20171201071621) do
     t.string "architectural_condition"
     t.string "connecting_road"
     t.string "paved_road"
-    t.string "road_class1"
+    t.string "roed_class1"
     t.integer "contact_distance1"
     t.string "designation_road1"
-    t.string "road_direction1"
-    t.integer "road_width1"
-    t.string "road_class2"
+    t.string "roed_direction1"
+    t.integer "roed_width1"
+    t.string "roed_class2"
     t.integer "contact_distance2"
     t.string "designation_road2"
-    t.string "road_direction2"
-    t.integer "road_width2"
-    t.string "road_class3"
+    t.string "roed_direction2"
+    t.integer "roed_width2"
+    t.string "roed_class3"
     t.integer "contact_distance3"
     t.string "designation_road3"
-    t.string "road_direction3"
-    t.integer "road_width3"
-    t.string "road_class4"
+    t.string "roed_direction3"
+    t.integer "roed_width3"
+    t.string "roed_class4"
     t.integer "contact_distance4"
     t.string "designation_road4"
-    t.string "road_direction4"
-    t.integer "road_width4"
+    t.string "roed_direction4"
+    t.integer "roed_width4"
     t.string "homeowner_association"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "admin_selects", force: :cascade do |t|
+  create_table "selects", force: :cascade do |t|
     t.string "content_id"
     t.integer "select_id"
     t.text "return_text"
@@ -232,7 +217,7 @@ ActiveRecord::Schema.define(version: 20171201071621) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "admin_staffs", force: :cascade do |t|
+  create_table "staffs", force: :cascade do |t|
     t.string "company_id"
     t.text "picture"
     t.date "shooting_date"
@@ -255,23 +240,6 @@ ActiveRecord::Schema.define(version: 20171201071621) do
     t.text "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "admin_users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string "current_sign_in_ip"
-    t.string "last_sign_in_ip"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_admin_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
 end

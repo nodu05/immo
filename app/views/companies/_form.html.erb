@@ -1,0 +1,71 @@
+<%= form_with(model: company, local: true) do |form| %>
+  <% if company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+      <% company.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-inline">
+    <%= form.label :会社名 %>
+    <%= form.text_field :name, id: :company_name, :class => 'form-control' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :代表電話番号 %>
+    <%= form.text_field :main_phone, id: :company_main_phone, :class => 'form-control' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :問い合わせ電話 %>
+    <%= form.text_field :inquiry_phone, id: :company_inquiry_phone, :class => 'form-control' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :郵便番号 %>
+    <%= form.number_field :postal_code, id: :postal_code, :class => 'form-control' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :都道府県 %>
+    <%= form.text_field :prefecture, id: :prefecture, :class => 'form-control' %>
+
+    <%= form.label :市区町村 %>
+    <%= form.text_field :city, id: :city, :class => 'form-control' %>
+
+    <%= form.label :番地 %>
+    <%= form.text_area :street, id: :street, :class => 'form-control' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :メールアドレス %>
+    <%= form.text_area :email, id: :company_email, :class => 'form-control' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :宅建業免許番号 %>
+    <%= form.text_area :license_number, id: :company_license_number, :class => 'form-control' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :営業開始時間 %>
+    <%= form.time_field :open_time, value: "%H:%M", id: :company_open_time, :class => 'form-control' %>
+
+    <%= form.label :営業終了時間 %>
+    <%= form.time_field :end_time, value: "%H:%M", id: :company_end_time, :class => 'form-control' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :定休日 %>
+    <%= form.text_area :regular_holiday, id: :company_regular_holiday, :class => 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :更新, :class => 'btn btn-primary' %>
+  </div>
+<% end %>

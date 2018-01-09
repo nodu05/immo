@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>項目:</strong>
+  <%= @select.content_id %>
+</p>
+
+<p>
+  <strong>No:</strong>
+  <%= @select.select_id %>
+</p>
+
+<p>
+  <strong>項目名:</strong>
+  <%= @select.return_text %>
+</p>
+
+<%= link_to '修正', edit_select_path(@select) %> |
+<%= link_to '戻る', selects_path %>

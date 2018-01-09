@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>姓:</strong>
+  <%= @customer.last_name %>
+</p>
+
+<p>
+  <strong>名:</strong>
+  <%= @customer.first_name %>
+</p>
+
+<p>
+  <strong>セイ:</strong>
+  <%= @customer.furigana_last_name %>
+</p>
+
+<p>
+  <strong>メイ:</strong>
+  <%= @customer.furigana_first_name %>
+</p>
+
+<p>
+  <strong>性別:</strong>
+  <%= @customer.gender %>
+</p>
+
+<p>
+  <strong>生年月日:</strong>
+  <%= @customer.birth %>
+</p>
+
+<p>
+  <strong>電話番号:</strong>
+  <%= @customer.home_phone %>
+</p>
+
+<p>
+  <strong>携帯電話:</strong>
+  <%= @customer.mobile_phone %>
+</p>
+
+<p>
+  <strong>郵便番号:</strong>
+  <%= @customer.postal_code %>
+</p>
+
+<p>
+  <strong>都道府県:</strong>
+  <%= @customer.prefecture %>
+</p>
+
+<p>
+  <strong>市区町村:</strong>
+  <%= @customer.city %>
+</p>
+
+<p>
+  <strong>番地:</strong>
+  <%= @customer.street %>
+</p>
+
+<p>
+  <strong>メールアドレス:</strong>
+  <%= @customer.email %>
+</p>
+
+<%= link_to '修正', edit_customer_path(@customer) %> |
+<%= link_to '戻る', customers_path %>
