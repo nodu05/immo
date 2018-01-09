@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>従業員情報</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>営業所コード</th>
+      <th>顔写真</th>
+      <th>撮影年月日</th>
+      <th>従業者証明書番号</th>
+      <th>証明書有効期間開始</th>
+      <th>証明書有効期間終了</th>
+      <th>宅建士資格有無</th>
+      <th>姓</th>
+      <th>名</th>
+      <th>セイ</th>
+      <th>メイ</th>
+      <th>性別</th>
+      <th>生年月日</th>
+      <th>電話番号</th>
+      <th>携帯電話</th>
+      <th>郵便番号</th>
+      <th>都道府県</th>
+      <th>市区町村</th>
+      <th>番地</th>
+      <th>メールアドレス</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @staffs.each do |staff| %>
+      <tr>
+        <td><%= staff.company_id %></td>
+        <td><%= staff.picture %></td>
+        <td><%= staff.shooting_date %></td>
+        <td><%= staff.certificate_number %></td>
+        <td><%= staff.start_certificate_lifetime %></td>
+        <td><%= staff.end_certificate_lifetime %></td>
+        <td><%= staff.real_estate_notary %></td>
+        <td><%= staff.last_name %></td>
+        <td><%= staff.first_name %></td>
+        <td><%= staff.furigana_last_name %></td>
+        <td><%= staff.furigana_first_name %></td>
+        <td><%= staff.gender %></td>
+        <td><%= staff.birth %></td>
+        <td><%= staff.home_phone %></td>
+        <td><%= staff.mobile_phone %></td>
+        <td><%= staff.postal_code %></td>
+        <td><%= staff.prefecture %></td>
+        <td><%= staff.city %></td>
+        <td><%= staff.street %></td>
+        <td><%= staff.email %></td>
+        <td><%= link_to '照会', staff %></td>
+        <td><%= link_to '修正', edit_staff_path(staff) %></td>
+        <td><%= link_to '削除', staff, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '追加', new_staff_path %>

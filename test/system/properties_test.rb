@@ -1,9 +1,9 @@
 require "application_system_test_case"
 
-class Admin::PropertiesTest < ApplicationSystemTestCase
+class PropertiesTest < ApplicationSystemTestCase
   # test "visiting the index" do
-  #   visit admin_properties_url
+  #   visit properties_url
   #
-  #   assert_selector "h1", text: "Admin::Property"
+  #   assert_selector "h1", text: "Property"
   # end
 end

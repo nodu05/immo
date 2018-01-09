@@ -1,0 +1,107 @@
+<%= form_with(model: staff, local: true) do |form| %>
+  <% if staff.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(staff.errors.count, "error") %> prohibited this staff from being saved:</h2>
+
+      <ul>
+      <% staff.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= form.label :営業所コード %>
+    <%= form.collection_select :company_id, Company.all, :id, :name %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :顔写真 %>
+    <%= form.file_field :picture, id: :staff_picture, :class => 'form-group' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :撮影年月日 %>
+    <%= form.date_field :shooting_date, id: :staff_shooting_date, :class => 'form-control' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :従業者証明書番号 %>
+    <%= form.text_field :certificate_number, id: :staff_certificate_number, :class => 'form-control' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :証明書有効期間開始 %>
+    <%= form.date_field :start_certificate_lifetime, id: :staff_start_certificate_lifetime, :class => 'form-control' %>
+
+    <%= form.label :証明書有効期間終了 %>
+    <%= form.date_field :end_certificate_lifetime, id: :staff_end_certificate_lifetime, :class => 'form-control' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :宅建士資格有無 %>
+    <%= form.check_box :real_estate_notary, id: :staff_real_estate_notary, :class => 'checkbox' %>
+  </div>
+  
+  <div class="field form-inline">
+    <%= form.label :姓 %>
+    <%= form.text_field :last_name, id: :staff_last_name, :class => 'form-control' %>
+  
+    <%= form.label :名 %>
+    <%= form.text_field :first_name, id: :staff_first_name, :class => 'form-control' %>
+  </div>
+  
+  <div class="field form-inline">
+    <%= form.label :セイ %>
+    <%= form.text_field :furigana_last_name, id: :staff_furigana_last_name, :class => 'form-control' %>
+
+    <%= form.label :メイ %>
+    <%= form.text_field :furigana_first_name, id: :staff_furigana_first_name, :class => 'form-control' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :性別 %>
+    <%= form.collection_select :gender, Select.where(content_id: "gender"), :return_text, :return_text %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :生年月日 %>
+    <%= form.date_field :birth, id: :staff_birth, :class => 'form-group' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :電話番号 %>
+    <%= form.text_field :home_phone, id: :staff_home_phone, :class => 'form-control' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :携帯番号 %>
+    <%= form.text_field :mobile_phone, id: :staff_mobile_phone, :class => 'form-control' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :郵便番号 %>
+    <%= form.number_field :postal_code, id: :postal_code, :class => 'form-control' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :都道府県 %>
+    <%= form.text_field :prefecture, id: :prefecture, :class => 'form-control' %>
+
+    <%= form.label :市区町村 %>
+    <%= form.text_field :city, id: :city, :class => 'form-control' %>
+
+    <%= form.label :番地 %>
+    <%= form.text_area :street, id: :street, :class => 'form-control' %>
+  </div>
+
+  <div class="field form-inline">
+    <%= form.label :メールアドレス %>
+    <%= form.text_area :email, id: :staff_email, :class => 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :更新, :class => 'btn btn-primary' %>
+  </div>
+<% end %>

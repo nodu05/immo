@@ -24,7 +24,7 @@
     </tr>
     <tr>
         <th><%= @ask5 %></th>
-        <td><%= collection_select(:rate, :type, Admin::Select.where(content_id: "rate_type"), :select_id, :return_text) %></td>
+        <td><%= collection_select(:rate, :type, Select.where(content_id: "rate_type"), :select_id, :return_text) %></td>
     </tr>
     <tr>
         <th><%= @ask6 %></th>
