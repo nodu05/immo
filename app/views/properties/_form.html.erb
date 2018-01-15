@@ -21,6 +21,10 @@
       <%= form.label :物件種目 %><br />
       <%= form.collection_select :property_type2, Select.where(content_id: "property_type2"), :return_text, :return_text %>
     </div>
+    <div class="col-sm-3 col-xs-6">
+    <%= form.label :郵便番号 %>
+    <%= form.number_field :postal_code, id: :property_postal_code, :class => 'form-control' %>
+   </div>
 　</div>
 
   <h2>取引</h2>
@@ -532,7 +536,7 @@
 
       <div class="col-xs-4">
         <%= form.label :部屋所在階８（階） %>
-        <%= form.number_field :room_leve8, id: :property_room_leve8, :class => 'form-control' %>
+        <%= form.number_field :room_level8, id: :property_room_level8, :class => 'form-control' %>
       </div>
       <div class="col-xs-4">
         <%= form.label :部屋タイプ８ %><br>
@@ -640,7 +644,7 @@
       </div>
       <div class="col-sm-3 col-xs-6">
         <%= form.label :最適用途 %><br>
-        <%= form.collection_select :optimum, Select.where(content_id: "optimum_site"), :return_text, :return_text, :include_blank => true %>
+        <%= form.collection_select :optimum_site, Select.where(content_id: "optimum_site"), :return_text, :return_text, :include_blank => true %>
       </div>
       <div class="col-sm-3 col-xs-6">
         <%= form.label :地域地区 %><br>

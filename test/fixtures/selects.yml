@@ -1,11 +1,721 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  content_id: MyString
-  select_id: 1
-  return_text: MyText
+  content_id: gender
+  select_id: 0
+  return_text: 不明
 
 two:
-  content_id: MyString
+  content_id: gender
   select_id: 1
-  return_text: MyText
+  return_text: 男性
+
+three:
+  content_id: gender
+  select_id: 2
+  return_text: 女性
+
+four:
+  content_id: gender
+  select_id: 9
+  return_text: 適用不能
+
+five:
+  content_id: property_type1
+  select_id: 0
+  return_text: 売土地
+
+six:
+  content_id: property_type1
+  select_id: 1
+  return_text: 売一戸建
+
+seven:
+  content_id: property_type1
+  select_id: 2
+  return_text: 売マンション
+
+eight:
+  content_id: property_type2
+  select_id: 0
+  return_text: 売土地
+
+nine:
+  content_id: property_type2
+  select_id: 1
+  return_text: 新築戸建
+
+ten:
+  content_id: property_type2
+  select_id: 2
+  return_text: 中古戸建
+
+eleven:
+  content_id: property_type2
+  select_id: 3
+  return_text: 新築マンション
+
+twelve:
+  content_id: property_type2
+  select_id: 4
+  return_text: 中古マンション
+
+thirteen:
+  content_id: transaction_type
+  select_id: 0
+  return_text: 売主
+
+fourteen:
+  content_id: transaction_type
+  select_id: 1
+  return_text: 代理
+
+fifteen:
+  content_id: transaction_type
+  select_id: 2
+  return_text: 専属
+
+sixteen:
+  content_id: transaction_type
+  select_id: 3
+  return_text: 専任
+
+seventeen:
+  content_id: transaction_type
+  select_id: 4
+  return_text: 一般
+
+eighteen:
+  content_id: measurement
+  select_id: 0
+  return_text: 公簿
+
+nineteen:
+  content_id: measurement
+  select_id: 1
+  return_text: 実測
+
+twenty:
+  content_id: measurement
+  select_id: 2
+  return_text: 壁芯
+
+twenty-one:
+  content_id: measurement
+  select_id: 3
+  return_text: 内法
+
+twenty-two:
+  content_id: setback_class
+  select_id: 0
+  return_text: 無
+
+twenty-three:
+  content_id: setback_class
+  select_id: 1
+  return_text: 有
+
+twenty-four:
+  content_id: setback_class
+  select_id: 2
+  return_text: 済
+
+twenty-five:
+  content_id: floor_plan
+  select_id:  0
+  return_text: R
+
+twenty-six:
+  content_id: floor_plan
+  select_id: 1
+  return_text: Ｋ 
+
+twenty-seven:
+  content_id: floor_plan
+  select_id: 2
+  return_text: ＤＫ 
+
+twenty-eight:
+  content_id: floor_plan
+  select_id: 3
+  return_text: ＬＫ 
+
+twenty-nine:
+  content_id: floor_plan
+  select_id: 4
+  return_text: ＬＤＫ 
+
+thirty:
+  content_id: floor_plan
+  select_id: 5
+  return_text: ＳＫ 
+
+thirty-one:
+  content_id: floor_plan
+  select_id: 6
+  return_text: ＳＤＫ 
+
+thirty-two:
+  content_id: floor_plan
+  select_id: 7
+  return_text: ＳＬＫ 
+
+thirty-three:
+  content_id: floor_plan
+  select_id: 8
+  return_text: ＳＬＤＫ
+
+thirty-four:
+  content_id: room_type
+  select_id:  0
+  return_text: 和
+
+thirty-five:
+  content_id: room_type
+  select_id: 1
+  return_text: 洋 
+
+thirty-six:
+  content_id: room_type
+  select_id: 2
+  return_text: ＤＫ 
+
+thirty-seven:
+  content_id: room_type
+  select_id: 3
+  return_text: ＬＤＫ
+
+thirty-eight:
+  content_id: room_type
+  select_id: 4
+  return_text: Ｌ
+
+thirty-nine:
+  content_id: room_type
+  select_id: 5
+  return_text: Ｄ
+
+forty:
+  content_id: room_type
+  select_id: 6
+  return_text: Ｋ
+
+forty-one:
+  content_id: room_type
+  select_id: 7
+  return_text: Ｓ
+
+forty-two:
+  content_id: room_type
+  select_id: 8
+  return_text: その他
+  
+forty-three:
+  content_id: situation
+  select_id:  0
+  return_text: 居住中
+
+forty-four:
+  content_id: situation
+  select_id: 1
+  return_text: 空家
+
+forty-five:
+  content_id: situation
+  select_id: 2
+  return_text: 賃貸中
+
+forty-six:
+  content_id: situation
+  select_id: 3
+  return_text: 未完成
+
+forty-seven:
+  content_id: situation
+  select_id: 4
+  return_text: 更地
+
+forty-eight:
+  content_id: situation
+  select_id: 5
+  return_text: 上物有
+
+forty-nine:
+  content_id: transfer
+  select_id: 0
+  return_text: 即時
+
+fifty:
+  content_id: transfer
+  select_id: 1
+  return_text: 相談
+
+fifty-one:
+  content_id: transfer
+  select_id: 2
+  return_text: 期日指定
+
+fifty-two:
+  content_id: transfer
+  select_id: 3
+  return_text: 予定
+
+fifty-three:
+  content_id: remuneration
+  select_id: 0
+  return_text: 分かれ
+
+fifty-four:
+  content_id: remuneration
+  select_id: 1
+  return_text: 当方不払
+
+fifty-five:
+  content_id: remuneration
+  select_id: 2
+  return_text: 当方片手数
+
+fifty-six:
+  content_id: remuneration
+  select_id: 3
+  return_text: 代理折半
+
+fifty-seven:
+  content_id: remuneration
+  select_id: 4
+  return_text: 相談
+
+fifty-eight:
+  content_id: town_plan
+  select_id: 0
+  return_text: 市街
+
+fifty-nine:
+  content_id: town_plan
+  select_id: 1
+  return_text: 調整
+
+sixty:
+  content_id: town_plan
+  select_id: 2
+  return_text: 非線引き
+
+sixty-one:
+  content_id: town_plan
+  select_id: 3
+  return_text: 域外
+
+sixty-two:
+  content_id: town_plan
+  select_id: 4
+  return_text: 準都市
+
+sixty-three:
+  content_id: situation_landcategory
+  select_id: 0
+  return_text: 宅地
+
+sixty-four:
+  content_id: situation_landcategory
+  select_id: 1
+  return_text: 田
+
+sixty-five:
+  content_id: situation_landcategory
+  select_id: 2
+  return_text: 畑
+
+sixty-six:
+  content_id: situation_landcategory
+  select_id: 3
+  return_text: 山林
+
+sixty-seven:
+  content_id: situation_landcategory
+  select_id: 4
+  return_text: 雑種
+
+sixty-eight:
+  content_id: situation_landcategory
+  select_id: 5
+  return_text: 他
+
+sixty-nine:
+  content_id: zoning
+  select_id: 0
+  return_text: 一低
+
+seventy:
+  content_id: zoning
+  select_id: 1
+  return_text: 二中
+
+seventy-one:
+  content_id: zoning
+  select_id: 2
+  return_text: 二住
+
+seventy-two:
+  content_id: zoning
+  select_id: 3
+  return_text: 近商
+
+seventy-three:
+  content_id: zoning
+  select_id: 4
+  return_text: 商業
+
+seventy-four:
+  content_id: zoning
+  select_id: 5
+  return_text: 準工
+
+seventy-five:
+  content_id: zoning
+  select_id: 6
+  return_text: 工業
+
+seventy-six:
+  content_id: zoning
+  select_id: 7
+  return_text: 工専
+
+seventy-seven:
+  content_id: zoning
+  select_id: 8
+  return_text: 二低 
+
+seventy-eight:
+  content_id: zoning
+  select_id: 9
+  return_text: 一中
+
+seventy-nine:
+  content_id: zoning
+  select_id: 10
+  return_text: 一住
+
+eighty:
+  content_id: zoning
+  select_id: 11
+  return_text: 準住
+
+eighty-one:
+  content_id: zoning
+  select_id: 12
+  return_text: 無指定
+
+eighty-two:
+  content_id: optimum_site
+  select_id: 0
+  return_text: 住宅用地
+
+eighty-three:
+  content_id: optimum_site
+  select_id: 1
+  return_text: マンション用地
+
+eighty-four:
+  content_id: optimum_site
+  select_id: 2
+  return_text: ビル用地
+
+eighty-five:
+  content_id: optimum_site
+  select_id: 3
+  return_text: 店舗用地
+
+eighty-six:
+  content_id: optimum_site
+  select_id: 4
+  return_text: 工業用地
+
+eighty-seven:
+  content_id: optimum_site
+  select_id: 5
+  return_text: 配送センタ用地
+
+eighty-eight:
+  content_id: optimum_site
+  select_id: 6
+  return_text: 営業所用地
+
+eighty-nine:
+  content_id: optimum_site
+  select_id: 7
+  return_text: 保養所用地
+
+ninety:
+  content_id: optimum_site
+  select_id: 8
+  return_text: その他用地
+
+ninety-one:
+  content_id: optimum_site
+  select_id: 9
+  return_text: 事務所用地
+
+ninety-two:
+  content_id: optimum_site
+  select_id: 10
+  return_text: 別荘用地
+
+ninety-three:
+  content_id: optimum_site
+  select_id: 11
+  return_text: 倉庫用地
+
+ninety-four:
+  content_id: optimum_site
+  select_id: 12
+  return_text: 資材置場用地
+
+ninety-five:
+  content_id: optimum_site
+  select_id: 13
+  return_text: 家庭菜園用地
+
+ninety-six:
+  content_id: optimum_site
+  select_id: 14
+  return_text: アパート用地
+
+ninety-seven:
+  content_id: optimum_site
+  select_id: 15
+  return_text: 社宅社員寮用地
+
+ninety-eight:
+  content_id: optimum_site
+  select_id: 16
+  return_text: 病院診療所用地
+
+ninety-nine:
+  content_id: optimum_site
+  select_id: 17
+  return_text: 畑・農地用地
+
+onehundred:
+  content_id: optimum_site
+  select_id: 18
+  return_text: 事業用地
+
+onehundred-one:
+  content_id: optimum_site
+  select_id: 19
+  return_text: 駐車場用地
+
+onehundred-two:
+  content_id: zoning_district
+  select_id: 0
+  return_text: 防火
+
+onehundred-three:
+  content_id: zoning_district
+  select_id: 1
+  return_text: 準防火
+
+onehundred-four:
+  content_id: zoning_district
+  select_id: 2
+  return_text: 高度
+
+onehundred-five:
+  content_id: zoning_district
+  select_id: 3
+  return_text: 高度利用
+
+onehundred-six:
+  content_id: zoning_district
+  select_id: 4
+  return_text: 風致
+
+onehundred-seven:
+  content_id: zoning_district
+  select_id: 5
+  return_text: 文教
+
+onehundred-eight:
+  content_id: zoning_district
+  select_id: 6
+  return_text: その他
+
+onehundred-nine:
+  content_id: nationalland_law
+  select_id: 0
+  return_text: 要
+
+onehundred-ten:
+  content_id: nationalland_law
+  select_id: 1
+  return_text: 届出中
+
+onehundred-eleven:
+  content_id: nationalland_law
+  select_id: 2
+  return_text: 不要
+
+onehundred-twelve:
+  content_id: buildingcertification
+  select_id: 0
+  return_text: 済
+
+onehundred-thirteen:
+  content_id: buildingcertification
+  select_id: 1
+return_text: 無
+
+onehundred-fourteen:
+  content_id: buildingcertification
+  select_id: 2
+  return_text: 申請中
+
+onehundred-fifteen:
+  content_id: land_title
+  select_id: 0
+  return_text: 所有権
+
+onehundred-sixteen:
+  content_id: land_title
+  select_id: 1
+  return_text: 旧法地上
+
+onehundred-seventeen:
+  content_id: land_title
+  select_id: 2
+  return_text: 旧法賃借
+
+onehundred-eighteen:
+  content_id: land_title
+  select_id: 3
+  return_text: 普通地上 
+
+onehundred-nineteen:
+  content_id: land_title
+  select_id: 4
+  return_text: 定期地上
+
+onehundred-twenty:
+  content_id: land_title
+  select_id: 5
+  return_text: 普通賃借
+ 
+onehundred-twenty-one:
+  content_id: land_title
+  select_id: 6
+  return_text: 定期賃借
+
+onehundred-twenty-two:
+  content_id: terrain
+  select_id: 0
+  return_text: 平坦
+
+onehundred-twenty-three:
+  content_id: terrain
+  select_id: 1
+  return_text: 高台
+
+onehundred-twenty-four:
+  content_id: terrain
+  select_id: 2
+  return_text: 低地
+
+onehundred-twenty-five:
+  content_id: terrain
+  select_id: 3
+  return_text: ひな段
+
+onehundred-twenty-six:
+  content_id: terrain
+  select_id: 4
+  return_text: 傾斜地
+
+onehundred-twenty-seven:
+  content_id: terrain
+  select_id: 5
+  return_text: その他
+
+onehundred-twenty-eight:
+  content_id: connecting_road
+  select_id: 0
+  return_text: 一方
+
+onehundred-twenty-nine:
+  content_id: connecting_road
+  select_id: 1
+  return_text: 角地
+
+onehundred-thirty:
+  content_id: connecting_road
+  select_id: 2
+  return_text: 三方
+
+onehundred-thirty-one:
+  content_id: connecting_road
+  select_id: 3
+  return_text: 四方
+
+onehundred-thirty-two:
+  content_id: connecting_road
+  select_id: 4
+  return_text: 二方
+
+onehundred-thirty-three:
+  content_id: road_class
+  select_id: 0
+  return_text: 公道
+
+onehundred-thirty-four:
+  content_id: road_class
+  select_id: 1
+  return_text: 私道
+
+onehundred-thirty-five:
+  content_id: road_direction
+  select_id: 0
+  return_text: 北
+
+onehundred-thirty-six:
+  content_id: road_direction
+  select_id: 1
+  return_text: 北東
+
+onehundred-thirty-seven:
+  content_id: road_direction
+  select_id: 2
+  return_text: 東
+
+onehundred-thirty-eight:
+  content_id: road_direction
+  select_id: 3
+  return_text: 南東
+
+onehundred-thirty-nine:
+  content_id: road_direction
+  select_id: 4
+  return_text: 南
+
+onehundred-forty:
+  content_id: road_direction
+  select_id: 5
+  return_text: 南西
+
+onehundred-forty-one:
+  content_id: road_direction
+  select_id: 6
+  return_text: 西
+
+onehundred-forty-two:
+  content_id: road_direction
+  select_id: 7
+  return_text: 北西
+
+onehundred-forty-three:
+  content_id: umu
+  select_id: 0
+  return_text: 有
+
+onehundred-forty-four:
+  content_id: umu
+  select_id: 1
+  return_text: 無

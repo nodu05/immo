@@ -11,7 +11,8 @@
       <th>媒介契約年月日</th>
       <th>取引状況</th>
       <th>取引状況の説明</th>
-      <th>都道府県/th>
+      <th>郵便番号</th>
+      <th>都道府県</th>
       <th>市区町村</th>
       <th>番地</th>
       <th>番地表示</th>
@@ -128,7 +129,6 @@
       <th>用途地域1</th>
       <th>用途地域2</th>
       <th>最適用途</th>
-      <th>Site</th>
       <th>地域地区</th>
       <th>建蔽率</th>
       <th>容積率</th>
@@ -177,6 +177,7 @@
         <td><%= property.mediation_date %></td>
         <td><%= property.condition %></td>
         <td><%= property.supplementary_explanation %></td>
+        <td><%= property.postal_code %></td>
         <td><%= property.prefecture %></td>
         <td><%= property.city %></td>
         <td><%= property.street %></td>
@@ -271,7 +272,7 @@
         <td><%= property.room_level7 %></td>
         <td><%= property.room_type7 %></td>
         <td><%= property.room_size7 %></td>
-        <td><%= property.room_leve8 %></td>
+        <td><%= property.room_level8 %></td>
         <td><%= property.room_type8 %></td>
         <td><%= property.room_size8 %></td>
         <td><%= property.room_level9 %></td>
@@ -293,8 +294,7 @@
         <td><%= property.situation_landcategory %></td>
         <td><%= property.zoning1 %></td>
         <td><%= property.zoning2 %></td>
-        <td><%= property.optimum %></td>
-        <td><%= property._site %></td>
+        <td><%= property.optimum_site %></td>
         <td><%= property.zoning_district %></td>
         <td><%= property.buildingcoverage_ratio %></td>
         <td><%= property.floorarea_ratio %></td>

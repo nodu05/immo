@@ -7,6 +7,7 @@ class CreateProperties < ActiveRecord::Migration[5.1]
       t.date :mediation_date
       t.integer :condition
       t.text :supplementary_explanation
+      t.integer :postal_code
       t.string :prefecture
       t.string :city
       t.text :street
@@ -16,63 +17,63 @@ class CreateProperties < ActiveRecord::Migration[5.1]
       t.string :buildingnumber
       t.boolean :show_roomnumber
       t.string :measurement
-      t.integer :land_area
-      t.integer :building_area1
-      t.integer :building_area2
-      t.integer :occupied_area
-      t.integer :balcony_area
-      t.integer :terrace_area
-      t.integer :privategarden_area
+      t.string :land_area
+      t.string :building_area1
+      t.string :building_area2
+      t.string :occupied_area
+      t.string :balcony_area
+      t.string :terrace_area
+      t.string :privategarden_area
       t.string :driveway_burden
-      t.integer :driveway_area
+      t.string :driveway_area
       t.string :driveway_part1
       t.string :driveway_part2
       t.string :setback_class
-      t.integer :setback_distance
-      t.integer :setback_area
+      t.string :setback_distance
+      t.string :setback_area
       t.string :alleyground_class
-      t.integer :alleyground_area
-      t.integer :firstfloor_area
-      t.integer :secondfloor_area
-      t.integer :thirdfloor_area
+      t.string :alleyground_area
+      t.string :firstfloor_area
+      t.string :secondfloor_area
+      t.string :thirdfloor_area
       t.text :otherfloor_area
       t.string :development_area1
-      t.integer :total_area
+      t.string :total_area
       t.integer :subdivision
       t.date :construction_date
-      t.integer :coownership_area
+      t.string :coownership_area
       t.string :coownership
       t.string :development_area2
-      t.integer :building_area3
-      t.integer :totalfloor_area
+      t.string :building_area3
+      t.string :totalfloor_area
       t.string :route_name1
       t.text :station_name1
-      t.integer :station_walkm1
-      t.integer :station_walkd1
-      t.integer :station_car1
-      t.integer :station_bus1
-      t.integer :busstop_walkm1
-      t.integer :busstop_walkd1
+      t.string :station_walkm1
+      t.string :station_walkd1
+      t.string :station_car1
+      t.string :station_bus1
+      t.string :busstop_walkm1
+      t.string :busstop_walkd1
       t.text :busroute_name1
       t.text :busstop_name1
       t.string :route_name2
       t.text :station_name2
-      t.integer :station_walkm2
-      t.integer :station_walkd2
-      t.integer :station_car2
-      t.integer :station_bus2
-      t.integer :busstop_walkm2
-      t.integer :busstop_walkd2
+      t.string :station_walkm2
+      t.string :station_walkd2
+      t.string :station_car2
+      t.string :station_bus2
+      t.string :busstop_walkm2
+      t.string :busstop_walkd2
       t.text :busroute_name2
       t.text :busstop_name2
       t.string :route_name3
       t.text :station_name3
-      t.integer :station_walkm3
-      t.integer :station_walkd3
-      t.integer :station_car3
-      t.integer :station_bus3
-      t.integer :busstop_walkm3
-      t.integer :busstop_walkd3
+      t.string :station_walkm3
+      t.string :station_walkd3
+      t.string :station_car3
+      t.string :station_bus3
+      t.string :busstop_walkm3
+      t.string :busstop_walkd3
       t.text :busroute_name3
       t.text :busstop_name3
       t.text :other_transportation
@@ -81,31 +82,31 @@ class CreateProperties < ActiveRecord::Migration[5.1]
       t.boolean :corner_room
       t.integer :room_level1
       t.string :room_type1
-      t.integer :room_size1
+      t.string :room_size1
       t.integer :room_level2
       t.string :room_type2
-      t.integer :room_size2
+      t.string :room_size2
       t.integer :room_level3
       t.string :room_type3
-      t.integer :room_size3
+      t.string :room_size3
       t.integer :room_level4
       t.string :room_type4
-      t.integer :room_size4
+      t.string :room_size4
       t.integer :room_level5
       t.string :room_type5
-      t.integer :room_size5
+      t.string :room_size5
       t.integer :room_level6
       t.string :room_type6
-      t.integer :room_size6
+      t.string :room_size6
       t.integer :room_level7
       t.string :room_type7
-      t.integer :room_size7
+      t.string :room_size7
       t.integer :room_level8
       t.string :room_type8
-      t.integer :room_size8
+      t.string :room_size8
       t.integer :room_level9
       t.string :room_type9
-      t.integer :room_size9
+      t.string :room_size9
       t.text :other_room
       t.integer :price
       t.integer :consumption_tax
@@ -138,25 +139,25 @@ class CreateProperties < ActiveRecord::Migration[5.1]
       t.string :connecting_road
       t.string :paved_road
       t.string :road_class1
-      t.integer :contact_distance1
+      t.string :contact_distance1
       t.string :designation_road1
       t.string :road_direction1
-      t.integer :road_width1
+      t.string :road_width1
       t.string :road_class2
-      t.integer :contact_distance2
+      t.string :contact_distance2
       t.string :designation_road2
       t.string :road_direction2
-      t.integer :road_width2
+      t.string :road_width2
       t.string :road_class3
-      t.integer :contact_distance3
+      t.string :contact_distance3
       t.string :designation_road3
       t.string :road_direction3
-      t.integer :road_width3
+      t.string :road_width3
       t.string :road_class4
-      t.integer :contact_distance4
+      t.string :contact_distance4
       t.string :designation_road4
       t.string :road_direction4
-      t.integer :road_width4
+      t.string :road_width4
       t.string :homeowner_association
 
       t.timestamps
