@@ -11,19 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field form-inline">
-    <%= form.label :項目 %>
-    <%= form.text_field :content_id, id: :select_content_id, :class => 'form-control' %>
-  </div>
-
-  <div class="field form-inline">
-    <%= form.label :No %>
-    <%= form.number_field :select_id, id: :select_select_id, :class => 'form-control' %>
-  </div>
-
-  <div class="field form-inline">
-    <%= form.label :項目名 %>
-    <%= form.text_area :return_text, id: :select_return_text, :class => 'form-control' %>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <th scope="row"><strong><%= form.label :項目 %></strong></th>
+          <td><%= form.text_field :content_id, id: :select_content_id, :class => 'form-control' %></td>
+          <th scope="row"><strong><%= form.label :No %></strong></th>
+          <td><%= form.number_field :select_id, id: :select_select_id, :class => 'form-control' %></td>
+        </tr>
+        <tr>
+          <th scope="row"><strong><%= form.label :項目名 %></strong></th>
+          <td><%= form.text_area :return_text, id: :select_return_text, :class => 'form-control' %></td>
+          <th scope="row">&nbsp;</th>
+          <td>&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <div class="actions">
