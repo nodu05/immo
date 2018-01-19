@@ -1,3 +1,36 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+th { background: #0082ad; color: #FFF;} 
+tr { display: block;}
+thead th,
+thead td,
+tbody th,
+tbody td{
+  display: list-item;
+  list-style: none;
+  border-bottom: 1px solid #858585
+}
+
+@media screen and (min-width:768px) {
+  table {
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+  }
+  thead tr,
+  tbody tr{
+    display: table-row;
+  }
+  thead th,
+  thead td,
+  tbody th,
+  tbody td{
+    border-right: 1px solid #ddd;
+    display: table-cell;
+    border-bottom: none;
+  }
+  th {
+    width: auto;
+  }
+}
