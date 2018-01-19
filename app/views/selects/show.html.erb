@@ -1,19 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>項目:</strong>
-  <%= @select.content_id %>
-</p>
+<h1>【照会】選択マスタ</h1>
 
-<p>
-  <strong>No:</strong>
-  <%= @select.select_id %>
-</p>
-
-<p>
-  <strong>項目名:</strong>
-  <%= @select.return_text %>
-</p>
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <th scope="row"><strong>項目:</strong></th>
+        <td><%= @select.content_id %></td>
+        <th scope="row"><strong>No:</strong></th>
+        <td><%= @select.select_id %></td>
+      </tr>
+      <tr>
+        <th scope="row"><strong>項目名:</strong></th>
+        <td><%= @select.return_text %></td>
+        <th scope="row">&nbsp;</th>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <%= link_to '修正', edit_select_path(@select) %> |
 <%= link_to '戻る', selects_path %>

@@ -1,64 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>会社名:</strong>
-  <%= @company.name %>
-</p>
+<h1>【照会】会社情報</h1>
 
-<p>
-  <strong>代表電話番号:</strong>
-  <%= @company.main_phone %>
-</p>
-
-<p>
-  <strong>問い合わせ電話:</strong>
-  <%= @company.inquiry_phone %>
-</p>
-
-<p>
-  <strong>郵便番号:</strong>
-  <%= @company.postal_code %>
-</p>
-
-<p>
-  <strong>都道府県:</strong>
-  <%= @company.prefecture %>
-</p>
-
-<p>
-  <strong>市区町村:</strong>
-  <%= @company.city %>
-</p>
-
-<p>
-  <strong>番地:</strong>
-  <%= @company.street %>
-</p>
-
-<p>
-  <strong>メールアドレス:</strong>
-  <%= @company.email %>
-</p>
-
-<p>
-  <strong>宅建業免許番号:</strong>
-  <%= @company.license_number %>
-</p>
-
-<p>
-  <strong>営業開始時間:</strong>
-  <%= @company.open_time %>
-</p>
-
-<p>
-  <strong>  営業終了時間:</strong>
-  <%= @company.end_time %>
-</p>
-
-<p>
-  <strong>定休日:</strong>
-  <%= @company.regular_holiday %>
-</p>
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <th scope="row"><strong>会社名:</strong></th>
+        <td><%= @company.name %></td>
+        <th scope="row"><strong>宅建業免許番号:</strong></th>
+        <td><%= @company.license_number %></td>
+      </tr>
+      <tr>
+        <th scope="row"><strong>代表電話番号:</strong></th>
+        <td><%= @company.main_phone %></td>
+        <th scope="row"><strong>営業開始時間:</strong></th>
+        <td><%= @company.open_time.to_s(:time) %></td>
+      </tr>
+      <tr>
+        <th scope="row"><strong>問い合わせ電話:</strong></th>
+        <td><%= @company.inquiry_phone %></td>
+        <th scope="row"><strong>営業終了時間:</strong></th>
+        <td><%= @company.end_time.to_s(:time) %></td>
+      </tr>
+      <tr>
+        <th scope="row"><strong>所在地</strong></th>
+        <td><%= @company.postal_code %> <%= @company.prefecture %><%= @company.city %><%= @company.street %></td>
+        <th scope="row"><strong>定休日:</strong></th>
+        <td><%= @company.regular_holiday %></td>
+      </tr>
+      <tr>
+        <th scope="row"><strong>メールアドレス:</strong></th>
+        <td><%= @company.email %></td>
+        <th scope="row">&nbsp;</th>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <%= link_to '修正', edit_company_path(@company) %> |
 <%= link_to '戻る', companies_path %>

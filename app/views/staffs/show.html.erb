@@ -1,104 +1,73 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>営業所コード:</strong>
-  <%= @staff.company_id %>
-</p>
+<h1>【照会】従業員情報</h1>
 
-<p>
-  <strong>顔写真:</strong>
-  <%= @staff.picture %>
-</p>
-
-<p>
-  <strong>撮影年月日:</strong>
-  <%= @staff.shooting_date %>
-</p>
-
-<p>
-  <strong>従業者証明書番号:</strong>
-  <%= @staff.certificate_number %>
-</p>
-
-<p>
-  <strong>証明書有効期間開始:</strong>
-  <%= @staff.start_certificate_lifetime %>
-</p>
-
-<p>
-  <strong>証明書有効期間終了:</strong>
-  <%= @staff.end_certificate_lifetime %>
-</p>
-
-<p>
-  <strong>宅建士資格有無:</strong>
-  <%= @staff.real_estate_notary %>
-</p>
-
-<p>
-  <strong>姓:</strong>
-  <%= @staff.last_name %>
-</p>
-
-<p>
-  <strong>名:</strong>
-  <%= @staff.first_name %>
-</p>
-
-<p>
-  <strong>セイ:</strong>
-  <%= @staff.furigana_last_name %>
-</p>
-
-<p>
-  <strong>メイ:</strong>
-  <%= @staff.furigana_first_name %>
-</p>
-
-<p>
-  <strong>性別:</strong>
-  <%= @staff.gender %>
-</p>
-
-<p>
-  <strong>生年月日:</strong>
-  <%= @staff.birth %>
-</p>
-
-<p>
-  <strong>電話番号:</strong>
-  <%= @staff.home_phone %>
-</p>
-
-<p>
-  <strong>携帯電話:</strong>
-  <%= @staff.mobile_phone %>
-</p>
-
-<p>
-  <strong>郵便番号:</strong>
-  <%= @staff.postal_code %>
-</p>
-
-<p>
-  <strong>都道府県:</strong>
-  <%= @staff.prefecture %>
-</p>
-
-<p>
-  <strong>市区町村:</strong>
-  <%= @staff.city %>
-</p>
-
-<p>
-  <strong>番地:</strong>
-  <%= @staff.street %>
-</p>
-
-<p>
-  <strong>メールアドレス:</strong>
-  <%= @staff.email %>
-</p>
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <th scope="row"><strong>営業所コード:</strong></th>
+        <td><%= @staff.company_id %></td>
+        <th scope="row"><strong>顔写真:</strong></th>
+        <td><%= @staff.picture %></td>
+      </tr>
+      <tr>
+        <th scope="row"><strong>撮影年月日:</strong></th>
+        <td><%= @staff.shooting_date %></td>
+        <th scope="row"><strong>従業者証明書番号:</strong></th>
+        <td><%= @staff.certificate_number %></td>
+      </tr>
+      <tr>
+        <th scope="row"><strong>証明書有効期間開始:</strong></th>
+        <td><%= @staff.start_certificate_lifetime %></td>
+        <th scope="row"><strong>証明書有効期間終了:</strong></th>
+        <td><%= @staff.end_certificate_lifetime %></td>
+      </tr>
+      <tr>
+        <th scope="row"><strong>宅建士資格有無:</strong></th>
+        <td><%= @staff.real_estate_notary %></td>
+        <th scope="row"><strong>姓:</strong></th>
+        <td><%= @staff.last_name %></td>
+      </tr>
+      <tr>
+        <th scope="row"><strong>名:</strong></th>
+        <td><%= @staff.first_name %></td>
+        <th scope="row"><strong>セイ:</strong></th>
+        <td><%= @staff.furigana_last_name %></td>
+      </tr>
+      <tr>
+        <th scope="row"><strong>メイ:</strong></th>
+        <td><%= @staff.furigana_first_name %></td>
+        <th scope="row"><strong>性別:</strong></th>
+        <td><%= @staff.gender %></td>
+      </tr>
+      <tr>
+        <th scope="row"><strong>生年月日:</strong></th>
+        <td><%= @staff.birth %></td>
+        <th scope="row"><strong>電話番号:</strong></th>
+        <td><%= @staff.home_phone %></td>
+      </tr>
+      <tr>
+        <th scope="row"><strong>携帯電話:</strong></th>
+        <td><%= @staff.mobile_phone %></td>
+        <th scope="row"><strong>郵便番号:</strong></th>
+        <td><%= @staff.postal_code %></td>
+      </tr>
+      <tr>
+        <th scope="row"><strong>都道府県:</strong></th>
+        <td><%= @staff.prefecture %></td>
+        <th scope="row"><strong>市区町村:</strong></th>
+        <td><%= @staff.city %></td>
+      </tr>
+      <tr>
+        <th scope="row"><strong>番地:</strong></th>
+        <td><%= @staff.street %></td>
+        <th scope="row"><strong>メールアドレス:</strong></th>
+        <td><%= @staff.email %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <%= link_to '修正', edit_staff_path(@staff) %> |
 <%= link_to '戻る', staffs_path %>
